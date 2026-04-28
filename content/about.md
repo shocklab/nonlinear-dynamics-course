@@ -6,6 +6,12 @@ math: false
 
 ## About the Convenor
 
+<div class="bio-block">
+<div class="bio-photo">
+<img src="/nonlinear-dynamics-course/images/jonathan-shock.jpg" alt="Jonathan Shock">
+</div>
+<div class="bio-text">
+
 I'm **Jonathan Shock**, an Associate Professor in the Department of Mathematics and Applied Mathematics at the University of Cape Town. My research moves between theoretical physics, complex systems, and the application of machine learning to problems across the sciences and humanities. I wear a number of hats at UCT:
 
 - Associate Professor, Department of Mathematics and Applied Mathematics
@@ -17,6 +23,9 @@ I'm **Jonathan Shock**, an Associate Professor in the Department of Mathematics 
 ### Get in touch
 
 For corrections, questions, or to suggest improvements: [jon.shock@gmail.com](mailto:jon.shock@gmail.com). More about me at [shocklab.net](https://shocklab.net).
+
+</div>
+</div>
 
 ## About This Course
 
