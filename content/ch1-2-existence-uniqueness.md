@@ -5,7 +5,7 @@ math: true
 ---
 ## Section 1.2: Existence and Uniqueness
 
-We had a look at existence and uniqueness back in MAM1043H. If you don ’t remember this in detail (or at all), take a look here.
+We had a look at existence and uniqueness back in MAM1043H. If you don’t remember this in detail (or at all), take a look here.
 
 Thankfully the theorem that we gave (but didn't prove) for one-dimensional systems holds also for two-dimensional systems. Actually, we can do better than that: we can write a general theorem for all dimensions.
 

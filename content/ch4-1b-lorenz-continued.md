@@ -3,7 +3,7 @@ title: "Lorenz Equations (Continued)"
 weight: 42
 math: true
 ---
-## This notebook was almost entirely put together by Christopher Klausmeier of The Departments of Plant Biology & Integrative Biology Michigan State University (https://kl-lab.group/)
+## This notebook was almost entirely put together by Christopher Klausmeier of the Departments of Plant Biology and Integrative Biology, Michigan State University (https://kl-lab.group/)
 
 ```mathematica
 Quit[]

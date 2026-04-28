@@ -17,7 +17,7 @@ In fact we will always have a hole in the middle, because if there is a closed o
 
 There’s something that we should note about the vector field in the above example. On the boundary of the region $R$ the vector field is always pointing in. This means that once you are in, you’re in. You can’t escape the region, because any trajectory which left the region would have a vector pointing out of it.
 
-This is the whole trick to finding the right region such that we have a trajectory which is always within that region. Such a region is called a**trapping region**.
+This is the whole trick to finding the right region such that we have a trajectory which is always within that region. Such a region is called a **trapping region**.
 
 So long as we can find a trapping region, and we can make sure that there are no fixed points within that region, then we are sorted.
 
@@ -26,7 +26,7 @@ Example
 Here we will be able to find a trapping region by looking carefully at the vector field. The equation in question is similar to the previous one, but with an extra term, parameterised by a constant μ. Again we are looking at polar coordinates:
 
 $$
-\dot{r}=r \left(1-r^{2}\right)+r \mu{} \text{ cos } \theta{}
+\dot{r}=r \left(1-r^{2}\right)+r \mu{} \cos \theta{}
 $$
 
 $$
@@ -40,13 +40,13 @@ The question is whether we can find some region with an inner radius for which $
 We want to find $r_{\text{ min }}$ for which:
 
 $$
-r_{\text{ min }} \left(1-{r_{\text{ min }}}^{2}\right)+r_{\text{ min }} \mu{} \text{ cos } \theta{}>0
+r_{\text{ min }} \left(1-{r_{\text{ min }}}^{2}\right)+r_{\text{ min }} \mu{} \cos \theta{}>0
 $$
 
-For all values of θ. Solving for $r_{\text{ min } }\text{ gives }$:
+For all values of θ. Solving for $r_{\text{min}}$ gives:
 
 $$
-r_{\text{ min }}<\sqrt{1+\mu{} \text{ cos } \theta{}}
+r_{\text{ min }}<\sqrt{1+\mu{} \cos \theta{}}
 $$
 
 What is the lowest value that the right hand side can take? Well, the minimum value of cos θ is -1, so we can be sure that
@@ -107,7 +107,7 @@ We can also take $x \text{ and } y \text{ as both } \text{ being positive } \lef
 
 So, the question is whether we can find a trapping region in the phase space which does not contain any fixed point.
 
-I’m actually just going to give you the outer trapping region, as the argument for why it is a reasonable trapping reason is a little naunced, and not very enlightening.
+I’m actually just going to give you the outer trapping region, as the argument for why it is a reasonable trapping region is a little naunced, and not very enlightening.
 
 It turns out that the following region is a reasonable trapping region:
 
@@ -125,7 +125,7 @@ So is that enough to prove that we have a closed orbit? Not yet, we have to have
 
 ![Figure 4](/images/part23/anim_003.png)
 
-It looks like we might be in trouble. If this is an attractor then we are in trouble, and it looks in this example with $a=\frac{1}{5},b=1 \text{ that it } \text{ might be }$. If that’s the case, then we can’t form cut out a region around the fixed point with a boundary such that the arrows are pointing into the trapping region.
+It looks like we might be in trouble. If this is an attractor then we are in trouble, and it looks in this example with $a=\frac{1}{5},b=1$ that it might be. If that’s the case, then we can’t form cut out a region around the fixed point with a boundary such that the arrows are pointing into the trapping region.
 
 Can we figure out for which values of $a$ and $b$ this fixed point is an attractor and when it’s a repeller? Sure, we can use linearisation to do this.
 

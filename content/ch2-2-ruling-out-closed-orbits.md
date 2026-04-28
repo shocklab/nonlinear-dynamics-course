@@ -68,25 +68,25 @@ $$
 so that:
 
 $$
-\Delta{}V=-{\int{}}_{0}^{T}\left(\dot{x}. \dot{x}\right)\mathrm{d}t=-{\int{}}_{0}^{T}\dot{|x}|^{2}\mathrm{d}t
+\Delta V=-{\int}_{0}^{T}\left(\dot{\mathbf{x}}\cdot \dot{\mathbf{x}}\right)\mathrm{d}t=-{\int}_{0}^{T}|\dot{\mathbf{x}}|^{2}\mathrm{d}t
 $$
 
-where remember $\dot{x} \text{ is the }$ vector rate of change of $x \text{ and } y$ along the path. So long as we aren’t at a fixed point, then this can’t be zero, and therefore because we have a square on the right hand side inside the integral, the right hand side can ’t be zero. But we know that the left hand side is zero, so we have a contradiction. So it is impossible to have a path (which isn ’t just a trivial fixed point) for which $\Delta{}V=0$ which rules out any closed orbits in a gradient system.
+where remember $\dot{\mathbf{x}}$ is the vector rate of change of $x \text{ and } y$ along the path. So long as we aren’t at a fixed point, then this can’t be zero, and therefore because we have a square on the right hand side inside the integral, the right hand side can’t be zero. But we know that the left hand side is zero, so we have a contradiction. So it is impossible to have a path (which isn’t just a trivial fixed point) for which $\Delta{}V=0$ which rules out any closed orbits in a gradient system.
 
 Now we can look at an example and prove that because it is a gradient system, it can’t have closed orbits. For instance:
 
 $$
-\dot{x}=\text{ sin } y
+\dot{x}=\sin y
 $$
 
 $$
-\dot{y}=x \text{ cos } y
+\dot{y}=x \cos y
 $$
 
 This can clearly be written like
 
 $$
-\dot{x}=-\nabla{}V\left(x,y\right), \text{ for } V=-x \text{ sin } y
+\dot{x}=-\nabla{}V\left(x,y\right), \text{ for } V=-x \sin y
 $$
 
 Plotting the vector field for this example we see
@@ -118,11 +118,11 @@ $$
 And if these both give the same $V\left(x,y\right) \text{ then }$ we have a gradient system. Try this with
 
 $$
-\dot{x}=y^{2}+y \text{ cos } x
+\dot{x}=y^{2}+y \cos x
 $$
 
 $$
-\dot{y}=2x y+\text{ sin } x
+\dot{y}=2x y+\sin x
 $$
 
 Note that we have said that being a gradient system implies that there are no closed orbits, but we haven’t said anything about the implication the other way. There can indeed be non-gradient systems which also have no closed orbits, and this can often be proved in a similar way.
@@ -191,7 +191,7 @@ As a true aside, there is something similar that shows up in high energy theoret
 
 Dulac’s criterion
 
-We’re going to show one other way to prove that a system can ’t have any closed orbits.
+We’re going to show one other way to prove that a system can’t have any closed orbits.
 
 To show this we will have to use Green's theorem. I’m going to write it out in words, which is going to seem super complicated, but we will break it down after and see what it means:
 
@@ -199,7 +199,7 @@ This last part means that we take the vector at the boundary, and take the compo
 
 ![Figure 2](/images/part22/output_002.png)
 
-That is, given some continuously differentiable (it only has to be so within the region of interest) vector field, let’s call it $v$****(not the same as the potential, just some vector field) we can write the divergence of the vector field as
+That is, given some continuously differentiable (it only has to be so within the region of interest) vector field, let’s call it $v$ (not the same as the potential, just some vector field) we can write the divergence of the vector field as
 
 $$
 \nabla{}. v
@@ -234,7 +234,7 @@ where $l$ parameterises the path along the boundary and C labels the boundary of
 Let’s just look at a quick example of this. Taking the vector field
 
 $$
-v=\left(\begin{matrix} y \text{ sin } y \\ \text{ cos } y+x/2 \end{matrix}\right)
+v=\left(\begin{matrix} y \sin y \\ \cos y+x/2 \end{matrix}\right)
 $$
 
 and taking some region given in blue below, we plot the vector field, some region R, and the unit normal to the boundary of the region given by the black arrows:
@@ -246,7 +246,7 @@ Note that the vector field, and the region are arbitrary other than the fact tha
 The scalar field
 
 $$
-\nabla{}. v={\partial{}}_{x}v_{x}+{\partial{}}_{y}v_{y}=-\text{ sin } y
+\nabla{}. v={\partial{}}_{x}v_{x}+{\partial{}}_{y}v_{y}=-\sin y
 $$
 
 Which we now overlay on top of the above plot as a heat map (ie the colours indicating values between -1 and 1).
@@ -283,7 +283,7 @@ where we’ve written $f=\left(f_{x},f_{y}\right).$
 
 Again we are going to prove this by contradiction and we are going to use Green’s theorem where will use $v=g\left(x\right)f\left(x\right)= g\left(x\right) \dot{x}$ as our vector field.
 
-Let’s assume that there is some closed orbit, $C, $that lies entirely within $R$. Let $A$ be the region inside the closed orbit. Then we can apply Green ’s theorem to the region within the closed orbit:
+Let’s assume that there is some closed orbit, $C, $that lies entirely within $R$. Let $A$ be the region inside the closed orbit. Then we can apply Green’s theorem to the region within the closed orbit:
 
 $$
 \int{}{\int{}}_{A} \nabla{}. \left(g\left(x\right) \dot{x}\right) d A={\oint{}}_{C}\left(g\left(x\right) \dot{x}\right).n d l
@@ -301,7 +301,7 @@ But the region here is the supposed closed orbit, so $\dot{x}$ is always going t
 
 Just to give a bit more of a picture here, we are saying that we have some vector field $g\left(x\right) \dot{x}$ with a particular property related to the sign of its gradient in some region R. Then within that region we are suggesting that there might be a closed orbit. We then apply Green’s theorem not to R, but to the closed orbit, and show that there is a contradiction, and so there can be no closed orbit within R.
 
-The trick to Dulac’s criterian is that finding $g\left(x\right) \text{ may be } \text{ very hard }.$ I’m going to show you an example, but you wouldn ’t be expected to find this function $g.$
+The trick to Dulac’s criterion is that finding $g\left(x\right) \text{ may be } \text{ very hard }.$ I’m going to show you an example, but you wouldn’t be expected to find this function $g.$
 
 Given a vector field:
 
@@ -323,7 +323,7 @@ $$
 
 Which is negative for any value of $\left(x,y\right), $so in this case we can say that there are no closed orbits at all.
 
-Note, that this doesn’t say that there can ’t be fixed points, and indeed there are two of them at $\left(x,y\right)=\left(1,0\right),\text{ and } \left(0,0\right)$.
+Note, that this doesn’t say that there can’t be fixed points, and indeed there are two of them at $\left(x,y\right)=\left(1,0\right),\text{ and } \left(0,0\right)$.
 
 ![Figure 4](/images/part22/output_004.png)
 

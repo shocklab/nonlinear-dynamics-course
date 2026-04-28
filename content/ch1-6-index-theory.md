@@ -9,7 +9,7 @@ In this section we are going to develop some tools to allow us to say things abo
 
 Imagine drawing some closed curve in a phase portrait. It can be any curve, so long as it’s closed and it doesn’t self-intersect.
 
-Now walk along that curve and as you do so look at the vector field at each point. Each of the vectors makes some angle with the x-axis. Let ’s see what we mean by this with one particular point on a particular curve on a vector field.
+Now walk along that curve and as you do so look at the vector field at each point. Each of the vectors makes some angle with the x-axis. Let’s see what we mean by this with one particular point on a particular curve on a vector field.
 
 Let’s take an example from section 1.1:
 
@@ -41,23 +41,23 @@ $$
 
 ![Figure 4](/images/part16/output_004.png)
 
-Now take that vector and calculate the angle with the positive x-axis (we ’ve written here -φ because we measure in the counterclockwise direction):
+Now take that vector and calculate the angle with the positive x-axis (we’ve written here -φ because we measure in the counterclockwise direction):
 
 ![Figure 5](/images/part16/output_005.png)
 
 OK, so that seemed like quite a lot of work for one point, but actually we could have calculated that angle just from
 
 $$
-\phi{}={\text{ tan }}^{-1}  \frac{{\dot{x}}_{2}\left(x_{1},x_{2}\right)}{  {\dot{x}}_{1}\left(x_{1},x_{2}\right)}
+\phi{}={\tan}^{-1}  \frac{{\dot{x}}_{2}\left(x_{1},x_{2}\right)}{  {\dot{x}}_{1}\left(x_{1},x_{2}\right)}
 $$
 
-or in the more usual language of $x \text{ and } y:$
+or in the more usual language of $x$ and $y$:
 
 $$
-\phi{}={\text{ tan }}^{-1}  \frac{\dot{y}\left(x,y\right)}{  \dot{x} \left(x,y\right)}
+\phi{}={\tan}^{-1}  \frac{\dot{y}\left(x,y\right)}{  \dot{x} \left(x,y\right)}
 $$
 
-where $x^{ } \text{ and } y $are the coordinates on the curve.
+where $x$ and $y$ are the coordinates on the curve.
 
 OK, so now imagine doing that as you walk counterclockwise around the whole curve...calculate this value φ as you do so.
 
@@ -75,7 +75,7 @@ If we do this naively, it looks a bit strange:
 
 ![Figure 8](/images/part16/output_008.png)
 
-At θ=0, we’re pointing kind of down, which we can call φ[TildeTilde]$\frac{-\pi{}}{2}$ or we can call it φ[TildeTilde]$\frac{3\pi{}}{2}.$ Here we have chosen to call it the latter. As we increase θ, φ increases, but at around θ=-$\frac{3\pi{}}{2}$ we are pointing directly to the left, which we can call either $\phi{}=\pi{}$ or φ=-π, or φ=3π, etc. we have to remember that this is really continuous, so we could instead plot it like:
+At θ=0, we’re pointing kind of down, which we can call $\phi \approx -\frac{\pi}{2}$ or we can call it $\phi \approx \frac{3\pi}{2}$. Here we have chosen to call it the latter. As we increase θ, φ increases, but at around θ=-$\frac{3\pi{}}{2}$ we are pointing directly to the left, which we can call either $\phi{}=\pi{}$ or φ=-π, or φ=3π, etc. we have to remember that this is really continuous, so we could instead plot it like:
 
 ![Figure 9](/images/part16/output_009.png)
 
@@ -85,7 +85,7 @@ Was that necessarily the case? Well, how about we try the same thing but this ti
 
 ![Figure 10](/images/part16/anim_002.gif)
 
-Well, in this case we see that as it goes around, the arrow doesn ’t do a full rotation at all - it certainly moves about, but it doesn’t ever point to the left.
+Well, in this case we see that as it goes around, the arrow doesn’t do a full rotation at all - it certainly moves about, but it doesn’t ever point to the left.
 
 Let’s do the same thing around this contour with φ as a function of θ.
 
@@ -109,9 +109,9 @@ So we see here that we have gone around 2π again. But this is interesting becau
 
 OK, so I hope that you are convinced that whatever happens to this vector, it has to rotate around some integer number of times as we go around the closed loop.
 
-Actually, we have to be a little bit careful, because if the loop ever touches a fixed point then the vector goes to zero and it doesn ’t make sense to talk about whether a zero vector has rotated or not, so we will constrain ourselves to loops which don ’t go through any fixed points.
+Actually, we have to be a little bit careful, because if the loop ever touches a fixed point then the vector goes to zero and it doesn’t make sense to talk about whether a zero vector has rotated or not, so we will constrain ourselves to loops which don’t go through any fixed points.
 
-So we’ve seen in the above example that with the first loop, the vector with angle φ rotates once, and with the second loop it doesn ’t rotate at all.
+So we’ve seen in the above example that with the first loop, the vector with angle φ rotates once, and with the second loop it doesn’t rotate at all.
 
 The difference between the two is that the first loop encircled a center fixed point, and the second one didn’t encircle any fixed point at all...hmmm...I smell a clue...
 
@@ -139,7 +139,7 @@ Do this by taking points at, for instance π/4 intervals around the circle, and 
 
 1. So the index of a curve seems to be telling us something about the fixed points inside the curve. This means that if we move the curve from $C$ to a new curve $C’$ in such a way that the fixed points within it remain the same, then the index shouldn’t change, ie. $I_{C}=I_{C’}$. Remember that the index is an integer, but if we are moving the curve in such a way that we don’t pass over a fixed point, everything is changing smoothly...but we can’t change from one integer to another smoothly, so the index can’t change.
 
-2. So let’s say that we start with some curve which doesn ’t go around a fixed point. We can deform the curve down to a very small circle (which also doesn’t contain a fixed point). If we zoom into any region in a vector field, then so long as we aren ’t looking at a fixed point, the vectors should be pretty much constant in that region. So the index of a very small region without any fixed points must be zero. **This means that the index of any curve without any fixed points in it is zero.**
+2. So let’s say that we start with some curve which doesn’t go around a fixed point. We can deform the curve down to a very small circle (which also doesn’t contain a fixed point). If we zoom into any region in a vector field, then so long as we aren’t looking at a fixed point, the vectors should be pretty much constant in that region. So the index of a very small region without any fixed points must be zero. **This means that the index of any curve without any fixed points in it is zero.**
 
 3. Performing the transformation $t\to -t$ corresponds to switching the direction of the arrows in a vector field. If we do this, what happens to the index? You might imagine that $I_{C}\to -I_{C}$ but we have to be a bit more careful. switching the direction of the vector field will be the same as changing the direction of every arrow by an angle π, ie. $\phi{}\to \phi{}+\pi{}$. But if we are shifting **everything** by π, then the total change in φ won’t be altered and so **the index remains the same under the transformation.**
 
@@ -205,11 +205,11 @@ Looking at the vector field plot for this gives us:
 
 and on inspection we see that the fixed point at the origin has index 2.
 
-For $n=4 \text{ we have }$
+For $n=4$ we have
 
 ![Figure 19](/images/part16/output_019.png)
 
-For non-integer values of $n \text{ we end } \text{ up with } $so-called branch-cuts and so the fixed point is no longer isolated so it doesn’t make sense to talk about the index of the fixed point.
+For non-integer values of $n$ we end up with so-called branch-cuts and so the fixed point is no longer isolated so it doesn’t make sense to talk about the index of the fixed point.
 
 Can we get the index from integration in this case?
 
@@ -232,7 +232,7 @@ $$
 Let’s convert this to polar coordinates:
 
 $$
-\phi{}=\text{ arctan }\left(\frac{2 r \text{ cos }\left(\theta{}\right) r \text{ sin }\left(\theta{}\right)}{r^{2}{\text{ cos }}^{2}\left(\theta{}\right)-r^{2}{\text{ sin }}^{2}\left(\theta{}\right)}\right)=\text{ arctan }\left(\frac{2 \text{ cos }\left(\theta{}\right) \text{ sin }\left(\theta{}\right)}{{\text{ cos }}^{2}\left(\theta{}\right)-{\text{ sin }}^{2}\left(\theta{}\right)}\right)=\text{ arctan }\left( \text{ tan }\left(2\theta{}\right)\right)=2\theta{}
+\phi{}=\text{ arctan }\left(\frac{2 r \cos\left(\theta{}\right) r \sin\left(\theta{}\right)}{r^{2}{\cos}^{2}\left(\theta{}\right)-r^{2}{\sin}^{2}\left(\theta{}\right)}\right)=\text{ arctan }\left(\frac{2 \cos\left(\theta{}\right) \sin\left(\theta{}\right)}{{\cos}^{2}\left(\theta{}\right)-{\sin}^{2}\left(\theta{}\right)}\right)=\text{ arctan }\left( \tan\left(2\theta{}\right)\right)=2\theta{}
 $$
 
 Integrating this over θ from 0 to 2π tells us that:
@@ -250,7 +250,7 @@ $$
 We have:
 
 $$
-\phi{}=\text{ arctan }\left(\frac{\dot{y}}{\dot{x}}\right)=\text{ arctan }\left(\frac{Im\left(\dot{z}\right)}{Re\left(\dot{z}\right)}\right)=\text{ arctan }\left(\frac{Im\left(z^{n}\right)}{Re\left(z^{n}\right)}\right)=\text{ arctan }\left(\frac{Im\left(r^{n} e^{i n \theta{}}\right)}{Re\left(r^{n} e^{i n \theta{}}\right)}\right)=\text{ arctan }\left(\frac{\text{ sin }\left(n \theta{}\right)}{\text{ cos }\left(n \theta{}\right)}\right)=n \theta{}
+\phi{}=\text{ arctan }\left(\frac{\dot{y}}{\dot{x}}\right)=\text{ arctan }\left(\frac{Im\left(\dot{z}\right)}{Re\left(\dot{z}\right)}\right)=\text{ arctan }\left(\frac{Im\left(z^{n}\right)}{Re\left(z^{n}\right)}\right)=\text{ arctan }\left(\frac{Im\left(r^{n} e^{i n \theta{}}\right)}{Re\left(r^{n} e^{i n \theta{}}\right)}\right)=\text{ arctan }\left(\frac{\sin\left(n \theta{}\right)}{\cos\left(n \theta{}\right)}\right)=n \theta{}
 $$
 
 So

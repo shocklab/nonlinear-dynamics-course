@@ -89,13 +89,13 @@ This is really a cartoon version of what will happen, but it’s close to the tr
 
 And so we will find ourselves in a stable limit cycle zipping left and right quickly, and then going slowly along the curve until we shoot off again to the other side.
 
-Why is this a cartoon? Well, for one thing when we are going across, there will be some movement in the y-direction. It’s just that for large μ we can neglect it. The other major cartoonish thing that we ’ve done is to say that we move across to the right, then stop moving in the x-direction and just move a little in the y-direction until we are under the curve. In fact what happens here is that as we cross the curve (it’s a null-cline), we have to do so in the y-direction, but other than that when we are close to the curve we are moving at similar rates in the x and y-directions.
+Why is this a cartoon? Well, for one thing when we are going across, there will be some movement in the y-direction. It’s just that for large μ we can neglect it. The other major cartoonish thing that we’ve done is to say that we move across to the right, then stop moving in the x-direction and just move a little in the y-direction until we are under the curve. In fact what happens here is that as we cross the curve (it’s a null-cline), we have to do so in the y-direction, but other than that when we are close to the curve we are moving at similar rates in the x and y-directions.
 
 Let’s actually superimpose on top of this some trajectories for different values of μ, starting at the point (0,0.5) to see how close to the truth we were.
 
 ![Figure 4](/images/part25/output_004.png)
 
-You can see that when $\mu{}=2$, the red cartoon drawing is not a good approximation of the true trajectory, in green. This isn’t surprising, because this isn’t a large value of μ. However, even for μ=5, we can see that it’s getting to be a pretty good approximation. Note that in the bits where we are whizzing across from left to right, there ’s a bit of vertical motion. But for μ=10, it looks like we are really very close indeed.
+You can see that when $\mu{}=2$, the red cartoon drawing is not a good approximation of the true trajectory, in green. This isn’t surprising, because this isn’t a large value of μ. However, even for μ=5, we can see that it’s getting to be a pretty good approximation. Note that in the bits where we are whizzing across from left to right, there’s a bit of vertical motion. But for μ=10, it looks like we are really very close indeed.
 
 If we plot the trajectories of x and y, we see the following (x is in red and y is in blue):
 
@@ -148,13 +148,13 @@ $$
 Now we just need to figure out what are $x_{a} $and $x_{b}$, but these are found easily from the curve and are given by 2 and 1 respectively, so our integral is:
 
 $$
-\text{ time to } \text{ go down } \text{ red arrow } = {\int{}}_{2}^{1}\mu{} \left(\frac{1}{x}-x\right)\mathrm{d}x =-\mu{}{\int{}}_{1}^{2} \left(\frac{1}{x}-x\right)\mathrm{d}x=-\mu{}\left( \text{ ln }\left(2\right)-\frac{3}{2}\right)=\mu{}\left(\frac{3}{2}-\text{ ln }\left(2\right)\right)
+\text{ time to } \text{ go down } \text{ red arrow } = {\int{}}_{2}^{1}\mu{} \left(\frac{1}{x}-x\right)\mathrm{d}x =-\mu{}{\int{}}_{1}^{2} \left(\frac{1}{x}-x\right)\mathrm{d}x=-\mu{}\left( \ln\left(2\right)-\frac{3}{2}\right)=\mu{}\left(\frac{3}{2}-\ln\left(2\right)\right)
 $$
 
 The period in the large μ limit is thus twice this, plus corrections for the fast part, which turns out to be $O\left(\frac{1}{{\mu{}}^{\frac{1}{3}}}\right)$, so we have:
 
 $$
-T = \mu{}\left(3-\text{ ln }\left(4\right)\right)+O\left(\frac{1}{{\mu{}}^{1/3}}\right)
+T = \mu{}\left(3-\ln\left(4\right)\right)+O\left(\frac{1}{{\mu{}}^{1/3}}\right)
 $$
 
 What a beautiful thing!

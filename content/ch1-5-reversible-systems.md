@@ -11,7 +11,7 @@ Well, actually that’s not quite true. In theory, they can, but the chances of 
 
 Well, you would need that the particles in the floor which are all jiggling around because they have some temperature all happen to jiggle in just the right way to push the bits of egg together at just the right moment. The particles in the egg itself would also all have to be jiggling in just the right way that the energy from them goes into chemical bonds which reform the egg and have enough left over to propel the egg up off the floor. Unlikely, I say, but technically not impossible...although in the lifetime of the universe, even if there were a million cracked eggs on a million floors in every planet in every galaxy in the observable universe, the chances of this happening even once are basically zero, so we say that this process is not reversible.
 
-The paragraph above was really about entropy and the arrow of time, and we ’re not going to go into that now, though there ’s much to be said about it.
+The paragraph above was really about entropy and the arrow of time, and we’re not going to go into that now, though there’s much to be said about it.
 
 How about if I take a video of a pendulum swinging back and forth and play it one way, and then the other way? You won’t be able to tell which one is the ‘correct’ direction, because each behaviour is just as likely. We can say that a pendulum swinging is a **reversible system**. The dynamics with time running in one direction is equivalent to the dynamics with time running in the other direction.
 
@@ -95,7 +95,7 @@ $$
 \dot{y}=g\left(x,y\right)
 $$
 
-what constraints are there on $f$ and $g$ such that the system is reversible under $t\to -t$ and $y\to -y$ (note that we have written $y \text{ now instead } \text{ of } v \text{ to be } a \text{ bit more } \text{ general }.$
+what constraints are there on $f$ and $g$ such that the system is reversible under $t\to -t$ and $y\to -y$ (note that we have written $y$ now instead of $v$ to be a bit more general.
 
 Well, first of all performing the transformations we get:
 
@@ -107,11 +107,11 @@ $$
 \dot{y}=g\left(x,-y\right)
 $$
 
-where the $\dot{y}$ has not changed sign because both $t \text{ and } y $have changed.
+where $\dot{y}$ has not changed sign because both $t$ and $y$ have changed.
 
-So for this to be invariant under the change, we need that $f$ is odd in $y$ and $g \text{ is even } \text{ in } y$ which will give us back our original system.
+So for this to be invariant under the change, we need that $f$ is odd in $y$ and $g$ is even in $y$ which will give us back our original system.
 
-So that's it. For a two-dimensional first order system to be reversible (ie. time reversal invariant), we need that $f$ is odd in $y$ and $g \text{ is even } \text{ in } y$.
+So that's it. For a two-dimensional first order system to be reversible (ie. time reversal invariant), we need that $f$ is odd in $y$ and $g$ is even in $y$.
 
 Remember from the last section that if you take a conservative system, where there is a linear center (ie. when you perform the linear analysis you find a center), then this center is robust in the full non-linear model (ie. the center is really there in the full system, not just the linearised system). Well, it turns out that in reversible systems, the same holds. A center which is really there in the non-linear system is called a non-linear center.
 
@@ -229,7 +229,7 @@ $$
 {\lambda{}}_{2}=-1+\sqrt{3}, v_{2}=\left(\begin{matrix} -1-\sqrt{3} \\ 1 \end{matrix}\right)
 $$
 
-${\lambda{}}_{1}$ is negative, so this corresponds to the inflowing eigenvector. ${\lambda{}}_{2} \text{ is positive }$ so this corresponds to the outflowing eigenvector.
+${\lambda{}}_{1}$ is negative, so this corresponds to the inflowing eigenvector. ${\lambda}_{2}$ is positive, so this corresponds to the outflowing eigenvector.
 
 We can look at the same thing for the fixed point at (-1,-1)
 
@@ -237,7 +237,7 @@ Let's draw on what we know...
 
 ![Figure 7](/images/part15/output_007.png)
 
-We also know that there are no other fixed points in this system, so there ’s not a great deal of freedom about what the trajectories could be doing. One other piece of information that we do have though is that everything is differentiable, and so we don’t expect any sharp jumps in trajectories, and so because of reversibility, whenever we pass through the x-axis it will be perpendicular to it. This just says that we know that there must be a reflection about the x-axis in the trajectories. In the absence of the smoothness condition, we could have, for instance:
+We also know that there are no other fixed points in this system, so there’s not a great deal of freedom about what the trajectories could be doing. One other piece of information that we do have though is that everything is differentiable, and so we don’t expect any sharp jumps in trajectories, and so because of reversibility, whenever we pass through the x-axis it will be perpendicular to it. This just says that we know that there must be a reflection about the x-axis in the trajectories. In the absence of the smoothness condition, we could have, for instance:
 
 ![Figure 8](/images/part15/output_008.png)
 
@@ -306,13 +306,13 @@ So we see that we have a homoclinic orbit. OK, but we just have a system which i
 
 ![Figure 14](/images/part15/output_014.png)
 
-Let’s rotate the coordinate system by -$\frac{\pi{}}{4} \text{ radians in } \text{ the anticlockwise } \text{ direction } $which will be equivalent to rotating the system by $\frac{\pi{}}{4}$ anticlockwise. To do this we can perform a rotation on our $\left(x,y\right) $coordinates as:
+Let’s rotate the coordinate system by $-\frac{\pi}{4}$ radians in the anticlockwise direction, which will be equivalent to rotating the system by $\frac{\pi{}}{4}$ anticlockwise. To do this we can perform a rotation on our $\left(x,y\right) $coordinates as:
 
 $$
-\left(\begin{matrix} x' \\ y' \end{matrix}\right)=\left(\begin{matrix} \text{ cos }\left(-\frac{\pi{}}{4}\right) & -\text{ sin }\left(-\frac{\pi{}}{4}\right) \\ \text{ sin }\left(-\frac{\pi{}}{4}\right) & \text{ cos }\left(-\frac{\pi{}}{4}\right) \end{matrix}\right) \left(\begin{matrix} x \\ y \end{matrix}\right)=\frac{1}{\sqrt{2}}\left(\begin{matrix} 1 & 1 \\ -1 & 1 \end{matrix}\right) \left(\begin{matrix} x \\ y \end{matrix}\right)
+\left(\begin{matrix} x' \\ y' \end{matrix}\right)=\left(\begin{matrix} \cos\left(-\frac{\pi{}}{4}\right) & -\sin\left(-\frac{\pi{}}{4}\right) \\ \sin\left(-\frac{\pi{}}{4}\right) & \cos\left(-\frac{\pi{}}{4}\right) \end{matrix}\right) \left(\begin{matrix} x \\ y \end{matrix}\right)=\frac{1}{\sqrt{2}}\left(\begin{matrix} 1 & 1 \\ -1 & 1 \end{matrix}\right) \left(\begin{matrix} x \\ y \end{matrix}\right)
 $$
 
-Performing this change of variables and then just relabelling the new $x'$ and $y'$ to $x \text{ and } y$ gives:
+Performing this change of variables and then just relabelling the new $x'$ and $y'$ to $x$ and $y$ gives:
 
 $$
 \dot{x}=\frac{1}{4}\left(-4 x+\sqrt{2} x^{2}+2 \sqrt{2} x y+\sqrt{2} y^{2}\right)
@@ -326,18 +326,18 @@ This looks like a hell of a mess, but if you now plot the flow lines in this new
 
 ![Figure 15](/images/part15/output_015.png)
 
-We see that there is a reflection symmetry about the line $y=x$ and thus the system is reversible and we have a fixed point away from the $x-\text{ axis }.$
+We see that there is a reflection symmetry about the line $y=x$ and thus the system is reversible and we have a fixed point away from the $x$-axis.
 
 An exercises for you
 
 1. Given
 
 $$
-\dot{x}=-2 \text{ cos } x-\text{ cos } y
+\dot{x}=-2 \cos x-\cos y
 $$
 
 $$
-\dot{y}=-2 \text{ cos } y-\text{ cos } x
+\dot{y}=-2 \cos y-\cos x
 $$
 
 Sketch the phase portrait.
@@ -349,7 +349,7 @@ Assignment
 The non-dimensionalised pendulum is modelled by
 
 $$
-\ddot{\theta{}}+\text{ sin } \theta{}=0
+\ddot{\theta{}}+\sin \theta{}=0
 $$
 
 1. Write this as a coupled set of first order equations.
@@ -374,7 +374,7 @@ $$
 
 10. What dynamics do the saddles correspond to?
 
-11. The phase plane as you have it is infinitely long in the $\theta{}-\text{ direction }$. Cut the phase plane at the first left and first right saddle points to the center, and imagine folding this up into a cylinder, identifying the two saddle points and standing the cylinder on its end. Try and sketch what trajectories would look like.
+11. The phase plane as you have it is infinitely long in the $\theta$ direction. Cut the phase plane at the first left and first right saddle points to the center, and imagine folding this up into a cylinder, identifying the two saddle points and standing the cylinder on its end. Try and sketch what trajectories would look like.
 
 12. This one is tricky to visualise! You can take the cylinder that you have, and rather than plotting the angle and angular velocity directions, plot the angle around the cylinder and the energy vertically. You should end up with something that looks like this. You are **NOT** expected to be able to figure this out for yourself. However, I want you to spend a while pondering what this means. Ignore the gaps in the lines...this is just a function of the way that this is plotted.
 

@@ -55,7 +55,7 @@ d) $F\left(x\right)\to \infty{} \text{ as } x\to \infty{}$
 
 then the system is guaranteed to have a single stable limit cycle around the origin in the phase plane.
 
-ok, there’s a lot to digest here! First of all let ’s look at the vector field itself:
+ok, there’s a lot to digest here! First of all let’s look at the vector field itself:
 
 $$
 \ddot{x}+\dot{x} f\left(x\right)+g\left(x\right)=0
@@ -100,7 +100,7 @@ What does a limit cycle mean here? It means that there is some periodic behaviou
 Here is again a rather contrived example from the above $f$ with equation:
 
 $$
-\ddot{x}+\dot{x} \left(-\frac{\text{ cos } x}{10+x^{2}}+0.0001x^{2}-0.01\right)+0.01x^{3}=0
+\ddot{x}+\dot{x} \left(-\frac{\cos x}{10+x^{2}}+0.0001x^{2}-0.01\right)+0.01x^{3}=0
 $$
 
 ![Figure 2](/images/part24/output_002.png)
@@ -121,7 +121,7 @@ Looking at how the VdP oscillator behaves for μ=5, we see the following. Here w
 
 This actually gives you quite a bit of flexibility for families of vector fields which have unique stable limit cycles about the origin.
 
-Lienard Systems were originally designed to model the radio and vacuum tube technology. Vacuum tubes were used originally instead of transistors in computers.
+Liénard Systems were originally designed to model the radio and vacuum tube technology. Vacuum tubes were used originally instead of transistors in computers.
 
 Exercise:
 

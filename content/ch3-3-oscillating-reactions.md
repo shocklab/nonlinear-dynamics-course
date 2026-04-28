@@ -9,7 +9,7 @@ In this section we’re going to look at a model for a complex chemical reaction
 
 ![Figure 1](/images/part33/output_001.png)
 
-The chemical details don’t matter at all here, but it turns out that a dynamical model of the concentrations of iodine $\left(x\right)$ and chlorine dioxide $\left(y\right) \text{ can be } \text{ given } $by
+The chemical details don’t matter at all here, but it turns out that a dynamical model of the concentrations of iodine $(x)$ and chlorine dioxide $(y)$ can be given by
 
 $$
 \dot{x}=a-x-\frac{4x y}{1+x^{2}}
@@ -73,7 +73,7 @@ These arrows are not showing the magnitude of the flow, just the direction. Make
 
 ok, so we see something maybe a bit interesting here...it looks like we might have something like a cycle about the fixed point occurring here.
 
-At this stage we should think about Poincaré-Bendixson, and for that we need to find a trapping region. Remember this is a region which can ’t contain a fixed point, but where all arrows on the boundary point into it. We don’t have quite enough yet to build this.
+At this stage we should think about Poincaré-Bendixson, and for that we need to find a trapping region. Remember this is a region which can’t contain a fixed point, but where all arrows on the boundary point into it. We don’t have quite enough yet to build this.
 
 Let’s also add on the vectors on the axes (at least their direction, if not magnitude.
 
@@ -127,7 +127,7 @@ $$
 
 So we can choose the top of our box to be infinitesimally above this value of y:
 
-Now we can form a trapping region as follows (with $b=1\right)$:
+Now we can form a trapping region as follows (with $b=1$):
 
 ![Figure 4](/images/part33/output_004.png)
 
@@ -167,7 +167,7 @@ We should also just make sure that the fixed point is always inside the box boun
 
 Let’s step back and think about what we’ve found. Well, we have shown that in some region of $\left(a,b\right) $parameter space there is a fixed point for the reaction and that you will end up with a steady state with just the two concentrations sitting there in perfect equilibrium. On the other hand, for another region of the parameter space you will have a stable limit cycle where the concentrations keep altering in a cyclic fashion.
 
-Let's just plot the trajectories on the vector field animated over changing $b, \text{ with } a=20.$ The transition happens when $b=$$\frac{3a}{5}-\frac{25}{a}=\frac{3 20}{5}-\frac{25}{20}=10.75.$
+Let's just plot the trajectories on the vector field animated over changing $b, \text{ with } a=20.$ The transition happens when $b=\frac{3a}{5}-\frac{25}{a}=\frac{3 \times 20}{5}-\frac{25}{20}=10.75.$
 
 Here we have two starting points. For small $b \text{ we }$ see that both are attracted to the limit cycle, for which one starting point is inside, and the other is outside. Then as $b $increases, the limit cycle shrinks down to the fixed point:
 

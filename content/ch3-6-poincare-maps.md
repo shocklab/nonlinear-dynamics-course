@@ -24,7 +24,7 @@ $$
 $$
 
 $$
-\overset{     }{\theta{}}\left(t\right)=5t
+\theta(t)=5t
 $$
 
 ![Figure 1](/images/part36/output_001.png)
@@ -55,7 +55,7 @@ So we can imagine that this map takes a point on $S$ and maps it to a new point 
 
 Clearly this will carry on forever and the points will get closer and closer together as we go around more and more times.
 
-Congratulations, you have just seen your first**Poincaré map**, though this isn’t the usual way that it’s presented. This is really to make sure that we can see why it’s a map.
+Congratulations, you have just seen your first **Poincaré map**, though this isn’t the usual way that it’s presented. This is really to make sure that we can see why it’s a map.
 
 One could think about doing this as a cobweb diagram. To get this we need the mapping P(r) explicitly, but this is just the same as plugging in $r_{i}$ instead of 0.1 into our equation, and asking what is the position after time $\frac{2\pi{}}{5}:$
 
@@ -77,18 +77,18 @@ Again, this is an illustration of the Poincaré map for this system.
 
 We see here (although we knew it already) that there is a unique, globally stable limit cycle at $r^{*}=1$.
 
-Let’s take a step back and think about what we ’ve got here. We took a system where we could define some surface (in this case actually a line) where the trajectories passed through. It happened to be in a relatively simple periodic way in this case, but it doesn’t have to be. We could then define something about the relative positions that the trajectory passed through the surface. This is the map from one pass through to the next, and is what we call the Poincar é map. Each point on the surface gets mapped to another point on the surface. We saw that there was a fixed point on the map, and this corresponds to the stable limit cycle.
+Let’s take a step back and think about what we’ve got here. We took a system where we could define some surface (in this case actually a line) where the trajectories passed through. It happened to be in a relatively simple periodic way in this case, but it doesn’t have to be. We could then define something about the relative positions that the trajectory passed through the surface. This is the map from one pass through to the next, and is what we call the Poincar é map. Each point on the surface gets mapped to another point on the surface. We saw that there was a fixed point on the map, and this corresponds to the stable limit cycle.
 
 Let’s look at another example, this time of the driven system:
 
 $$
-\dot{x}+x=A \text{ sin } \omega{} t
+\dot{x}+x=A \sin \omega{} t
 $$
 
 for some positive driving frequency ω. We can turn this into a two-dimensional autonomous system given by:
 
 $$
-\dot{x}+x=A \text{ sin } \theta{}
+\dot{x}+x=A \sin \theta{}
 $$
 
 $$
@@ -107,20 +107,20 @@ Notice that if we were to plot $x\left(t\right) $on its own it would be:
 
 ![Figure 6](/images/part36/output_006.png)
 
-What could we choose for the Surface of Section? Well, actually there are an infinite number of possible choices, but a natural one would be a fixed value of θ - ie a vertical slice through the cylinder. Let ’s take one like this with $\theta{}=0$:
+What could we choose for the Surface of Section? Well, actually there are an infinite number of possible choices, but a natural one would be a fixed value of θ - ie a vertical slice through the cylinder. Let’s take one like this with $\theta{}=0$:
 
 ![Figure 7](/images/part36/output_007.png)
 
-To get the Poincaré map, we can do so numerically, but it ’s much better to do so analytically. The solution to the general differential equation with $x\left(0\right)=x_{0}$ can be shown to be:
+To get the Poincaré map, we can do so numerically, but it’s much better to do so analytically. The solution to the general differential equation with $x\left(0\right)=x_{0}$ can be shown to be:
 
 $$
-x\left(t\right)=\frac{ \left(\left(x_{0}\left(1+{\omega{}}^{2}\right)+A \omega{}\right){\mathrm{e}}^{-t}-A  \left(\omega{} \text{ cos }\left(t \omega{}\right)+\text{ sin }\left(t \omega{}\right)\right)\right)}{1+{\omega{}}^{2}},   \theta{}\left(t\right)=t\omega{}
+x\left(t\right)=\frac{ \left(\left(x_{0}\left(1+{\omega{}}^{2}\right)+A \omega{}\right){\mathrm{e}}^{-t}-A  \left(\omega{} \cos\left(t \omega{}\right)+\sin\left(t \omega{}\right)\right)\right)}{1+{\omega{}}^{2}},   \theta{}\left(t\right)=t\omega{}
 $$
 
 The question that we have to ask then is what is $x\left(\frac{2\pi{}}{\omega{}}\right)$. This will be the map that we are interested in.
 
 $$
-x\left(\frac{2\pi{}}{\omega{}}\right)=\frac{ \left(\left(x_{0}\left(1+{\omega{}}^{2}\right)+A \omega{}\right){\mathrm{e}}^{-\frac{2\pi{}}{\omega{}}}-A  \left(\omega{} \text{ cos }\left(2\pi{}\right)+\text{ sin }\left(2\pi{}\right)\right)\right)}{1+{\omega{}}^{2}}=x_{0}{\mathrm{e}}^{-\frac{2\pi{}}{\omega{}}}+\frac{A \omega{} \left({\mathrm{e}}^{-\frac{2\pi{}}{\omega{}}}-1\right)}{1+{\omega{}}^{2}}
+x\left(\frac{2\pi{}}{\omega{}}\right)=\frac{ \left(\left(x_{0}\left(1+{\omega{}}^{2}\right)+A \omega{}\right){\mathrm{e}}^{-\frac{2\pi{}}{\omega{}}}-A  \left(\omega{} \cos\left(2\pi{}\right)+\sin\left(2\pi{}\right)\right)\right)}{1+{\omega{}}^{2}}=x_{0}{\mathrm{e}}^{-\frac{2\pi{}}{\omega{}}}+\frac{A \omega{} \left({\mathrm{e}}^{-\frac{2\pi{}}{\omega{}}}-1\right)}{1+{\omega{}}^{2}}
 $$
 
 So more generally:
@@ -205,7 +205,7 @@ $$
 v_{1}= \underset{i=1}{\overset{n-1}{\sum{}}}m_{i}D P\left(x^{*}\right).e_{i}
 $$
 
-and now we have the matrix $D$ $P\left(x^{*}\right)$ applied to $e_{i} $which are eigenvalues of this matrix, with eigenvalues ${\lambda{}}_{i}$, so we have:
+and now we have the matrix $DP(x^{*})$ applied to $e_{i}$, which are eigenvectors of this matrix, with eigenvalues $\lambda_{i}$, so we have:
 
 $$
 v_{1}= \underset{i=1}{\overset{n-1}{\sum{}}}m_{i}{\lambda{}}_{i}e_{i}
@@ -239,7 +239,7 @@ $$
 \lambda{}=P'\left(x^{*}\right)
 $$
 
-We have to be very careful here not to get confused with the normal type of linear stability analysis where we have some instability growing or shrinking exponentially. Remember we have a map here which can be thought of as a discrete set of steps. The λ tells you about how you grow each time you pass through the surface, so these are a discrete set of jumps. Let ’s go back to the case above and start close to the limit cycle:
+We have to be very careful here not to get confused with the normal type of linear stability analysis where we have some instability growing or shrinking exponentially. Remember we have a map here which can be thought of as a discrete set of steps. The λ tells you about how you grow each time you pass through the surface, so these are a discrete set of jumps. Let’s go back to the case above and start close to the limit cycle:
 
 The Floquet multiplier in this case is:
 

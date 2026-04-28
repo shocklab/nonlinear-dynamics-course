@@ -7,7 +7,7 @@ math: true
 
 We’ve now seen that while the normal types of bifurcations from 1d persist in 2d and don’t give us anything very different, the existence of limit cycles gives us something more interesting. So far we’ve looked at Supercritical Hopf bifurcations, by which a stable fixed point can explode out into a stable limit cycle and an unstable fixed point, or in the case of the subcritical Hopf bifurcation, an unstable limit cycle can engulf a stable fixed point to become an unstable fixed point. Finally we saw degenerate Hopf bifurcations where there are no limit cycles but only centers about the fixed point which changes from a stable to an unstable spiral across the bifurcation.
 
-So, what else can happen beyond these bifurcations? For the first case we think about what can happen with a flow on the line, and in particular a saddlepoint bifurcation. This occurs when a stable and unstable fixed point appear out of the blue and move away from one another (generically). An example of this would be
+So, what else can happen beyond these bifurcations? For the first case we think about what can happen with a flow on the line, and in particular a saddle-node bifurcation. This occurs when a stable and unstable fixed point appear out of the blue and move away from one another (generically). An example of this would be
 
 $$
 \dot{x}=\mu{} x+x^{3}-x^{5}
@@ -31,20 +31,20 @@ $$
 \dot{\theta{}}=\omega{}+b r^{2}
 $$
 
-Well, this will have exactly the same appearance of a pair of fixed points appearing at finite $r \text{ at }$ a particular value of μ, but we also see that the solutions will have angular velocity. In fact, this is exactly the same case that we illustrated for the subcritical Hopf bifurcation. That happens when $\mu{}=0 $, as indeed happens in the one-dimensional system. The saddlenode Hopf bifurcation occurs at $\mu{}=\frac{-1}{4}$
+Well, this will have exactly the same appearance of a pair of fixed points appearing at finite $r \text{ at }$ a particular value of μ, but we also see that the solutions will have angular velocity. In fact, this is exactly the same case that we illustrated for the subcritical Hopf bifurcation. That happens when $\mu{}=0 $, as indeed happens in the one-dimensional system. The saddle-node Hopf bifurcation occurs at $\mu{}=\frac{-1}{4}$
 
-So this system exhibits both a subcritical and saddlenode Hopf bifurcation, we can see them both happening here
+So this system exhibits both a subcritical and saddle-node Hopf bifurcation, we can see them both happening here
 
 ![Figure 3](/images/part34/output_003.png)
 
-ok, so what else can happen? This one is a little more complicated. Let ’s look at the system (for $\mu{}\geq 0$)
+ok, so what else can happen? This one is a little more complicated. Let’s look at the system (for $\mu{}\geq 0$)
 
 $$
 \dot{r}=r\left(1-r^{2}\right)
 $$
 
 $$
-\dot{\theta{}}=\mu{}-\text{ sin }\left(\theta{}\right)
+\dot{\theta{}}=\mu{}-\sin\left(\theta{}\right)
 $$
 
 We see that if you are on the line $r=1$ you will necessarily remain on it. But it’s not right in this case to say that it’s necessarily a closed orbit, or indeed a limit cycle. For $\mu{}>1,$ the second equation has no zeroes, and so there is no angle for which there is no angular velocity. However, for $0\leq \mu{}<1$, the second equation has two zeroes. This means that for $\mu{}>1$ there is a single, unstable fixed point at $r=0$, however for $0\leq \mu{}<1$ there are two extra fixed points at $r=0$ and the two solutions of
@@ -69,7 +69,7 @@ So what happens as we get to $\mu{}=1 \text{ from } $above? Well, just plotting 
 
 ![Figure 7](/images/part34/anim_001.gif)
 
-which doesn’t look terribly interesting...however, for $\mu{} \text{ just above }$ 1, we see that while there isn’t a fixed point, there will be a point where $\mu{}-\text{ sin }\left(\theta{}\right)$ gets very very small (just never hitting zero). That means that if we are on the limit cycle, as we get close to $\theta{}=\frac{\pi{}}{2}, $$\dot{\theta{}}$ will get very very small, and so we will slow down enormously as we get to this point. This looks like:
+which doesn’t look terribly interesting...however, for $\mu{} \text{ just above }$ 1, we see that while there isn’t a fixed point, there will be a point where $\mu{}-\sin\left(\theta{}\right)$ gets very very small (just never hitting zero). That means that if we are on the limit cycle, as we get close to $\theta{}=\frac{\pi{}}{2}, $$\dot{\theta{}}$ will get very very small, and so we will slow down enormously as we get to this point. This looks like:
 
 ![Figure 8](/images/part34/output_008.png)
 
@@ -80,13 +80,13 @@ In fact we can plot the trajectory on the unit circle as a function of time for 
 Can we calculate the period of the oscillation by integrating the differential equation:
 
 $$
-\dot{\theta{}}=\mu{}-\text{ sin }\left(\theta{}\right)
+\dot{\theta{}}=\mu{}-\sin\left(\theta{}\right)
 $$
 
 The period is how long θ takes to get from 0 to 2π, so we write:
 
 $$
-T={\int{}}_{0}^{2\pi{}}\frac{1}{\mu{}-\text{ sin }\left(\theta{}\right)}\mathrm{d}\theta{}=\frac{2\pi{}}{\sqrt{{\mu{}}^{2}-1}}
+T={\int{}}_{0}^{2\pi{}}\frac{1}{\mu{}-\sin\left(\theta{}\right)}\mathrm{d}\theta{}=\frac{2\pi{}}{\sqrt{{\mu{}}^{2}-1}}
 $$
 
 So as $\mu{}\to 1, $the period goes to infinity. This therefore is called an **Infinite Period Bifurcation**.

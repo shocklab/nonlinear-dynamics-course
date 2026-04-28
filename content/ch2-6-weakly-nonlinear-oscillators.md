@@ -5,7 +5,7 @@ math: true
 ---
 ## Section 2.6: Weakly nonlinear oscillators
 
-Not the Van der Pol oscillator again, I hear you cry!! Yep, I ’m afraid so...but this time in a different limit. Not the limit of very strong nonlinearities, but the opposite limit, where it ’s very close to linear:
+Not the Van der Pol oscillator again, I hear you cry!! Yep, I’m afraid so...but this time in a different limit. Not the limit of very strong nonlinearities, but the opposite limit, where it’s very close to linear:
 
 $$
 \ddot{x}+\epsilon{} \left(x^{2}-1\right)\dot{x} +x=0
@@ -50,7 +50,7 @@ We’ve gone from the complicated motion of the Van Der Pol oscillator, to a pre
 The same thing happens with the so-called Duffing equation, given by:
 
 $$
-\ddot{x}+\delta{} \dot{x}+\alpha{} x+\beta{} x^{3}=\gamma{} \text{ cos }\left(\omega{} t\right)
+\ddot{x}+\delta{} \dot{x}+\alpha{} x+\beta{} x^{3}=\gamma{} \cos\left(\omega{} t\right)
 $$
 
 This is of course a three dimensional system, but taking $\alpha{}=1, \delta{}=\gamma{}=0$, we have:
@@ -77,7 +77,7 @@ $$
 \ddot{x}+x+\epsilon{} h\left(x,\dot{x} \right)=0
 $$
 
-You might think that you could perform a perturbative analysis. This is often the case when you have a small parameter in the system. You set up the solution as a series expansion in the small parameter, plug in the series to the equation and solve order by order. Seems not implausible, so let ’s give it a go.
+You might think that you could perform a perturbative analysis. This is often the case when you have a small parameter in the system. You set up the solution as a series expansion in the small parameter, plug in the series to the equation and solve order by order. Seems not implausible, so let’s give it a go.
 
 Let’s look at the particular example:
 
@@ -132,19 +132,19 @@ So if we solve the $x_{0}\left(t\right)$ we can then plug it into the second equ
 The first equation has solution
 
 $$
-x_{0}\left(t\right)=c_{1}\text{ cos }\left(t\right)+c_{2}\text{ sin }\left(t\right)
+x_{0}\left(t\right)=c_{1}\cos\left(t\right)+c_{2}\sin\left(t\right)
 $$
 
 where $c_{2}=1 \text{ and } c_{1}=0 $by the initial conditions. Now going to the second equation we have:
 
 $$
-x_{1}''\left(t\right)+x_{1}\left(t\right)=-2\text{ cos }\left(t\right)
+x_{1}''\left(t\right)+x_{1}\left(t\right)=-2\cos\left(t\right)
 $$
 
 hmmm...but this is a resonant driving force. We can solve this and it gives us:
 
 $$
-x_{1}\left(t\right)=-t \text{ sin }\left(t\right)
+x_{1}\left(t\right)=-t \sin\left(t\right)
 $$
 
 But now we have a problem. We have said that $\epsilon{}$ is small, but in fact what we really need is that $\epsilon{} x_{1}\left(t\right) \text{ is small } \text{ compared }$ to $x_{0}\left(t\right)$, but now we have this $t \text{ term }$, so for large times, this second term is clearly not going to be smaller than the first term. In fact the second term is going to start to dominate when
@@ -156,7 +156,7 @@ $$
 because just going up to this second term our series expansion now looks like:
 
 $$
-x\left(t\right)=\text{ sin }\left(t\right)-\epsilon{} t \text{ sin }\left(t\right)+{\epsilon{}}^{2}x_{2}\left(t\right)+...
+x\left(t\right)=\sin\left(t\right)-\epsilon{} t \sin\left(t\right)+{\epsilon{}}^{2}x_{2}\left(t\right)+...
 $$
 
 So perhaps we can trust this series solution for small times, but not for times greater than of order $\frac{1}{\epsilon{}}.$
@@ -172,7 +172,7 @@ In fact we see that while the fast oscillations seem to be in ‘rhythm’ betwe
 We say that the short timescale behaviours (the oscillations) agree, but the longer timescale behaviours disagree. The reason for this is quite simple. If we take the true solution, it is given by:
 
 $$
-x\left(t\right)=e^{-\epsilon{} t }\frac{\text{ sin }\left(\sqrt{1-{\epsilon{}}^{2}}t\right)}{\sqrt{1-{\epsilon{}}^{2}}}
+x\left(t\right)=e^{-\epsilon{} t }\frac{\sin\left(\sqrt{1-{\epsilon{}}^{2}}t\right)}{\sqrt{1-{\epsilon{}}^{2}}}
 $$
 
 There is a fast timescale behaviour given by the sinusoidal motion, and there’s an exponential decay dominated by $e^{-t \epsilon{}}$. We can say that the fast timescale is O(1), and the slow timescale is O(1/ε).
@@ -185,13 +185,13 @@ $$
 e^{-\epsilon{} t }=1-\epsilon{} t+\frac{{\left(\epsilon{} t\right)}^{2}}{2}-...
 $$
 
-we know that this is exact, for arbitrary $\epsilon{} t$, but if $\epsilon{} t$ is large, then you need to take a very large number of terms. This is the issue that has arisen. We stopped at the second term...and that wasn ’t unreasonable, as we wanted to do this for small ε...but it’s not the size of ε that is important, it’s the size of ε $t$.
+we know that this is exact, for arbitrary $\epsilon{} t$, but if $\epsilon{} t$ is large, then you need to take a very large number of terms. This is the issue that has arisen. We stopped at the second term...and that wasn’t unreasonable, as we wanted to do this for small ε...but it’s not the size of ε that is important, it’s the size of ε $t$.
 
 What we see here is a general phenomenon. For any weakly nonlinear oscillator, we are going to have a timescale given by the purely linear approximation, then we’re going to have another timescale dictated by $\frac{1}{\epsilon{}}.$
 
 So can we still use a perturbative method? It turns out that we can, but we have to do a bit of a change of variables.
 
-Pause: We have mentioned timescales a bunch of times here, but what do we really mean. Well, it all feels a bit vague and hand-wavey, but what we really mean are the characteristic time over which there is a substantial change in some aspect of a system (an oscillator, a phase, an amplitude). If you have a periodic function of the form $f\left(t\right)=\text{ sin }\left(t\right)$, and let’s say that $t $is measured in seconds, then if you look at your system at time $t=0$ and time $t=0.01$, then your system isn’t going to have changed much. By timescale here we really mean, over what minimum order of magnitude of time will we see a noticeable change. There are lots of vague notions in here. What do we mean by “noticeable change ”? Also, what do we mean by order of magnitude. We really mean here not that we care about whether it’s 1 second, or 1.1 seconds, but whether it’s 1 second, or 0.1 seconds, or 10 seconds, etc. And in this case, because the frequency is $\frac{1}{2\pi{}}$, we can say that the timescale over which things change substantially is on the order of 1 second. After 1 second, you’ve completed 1/2π of the whole oscillation. After $\frac{4}{2\pi{}} \text{ seconds you }'\text{ ve gone } \text{ from } 0$ to the maximum of the oscillation, so this is a reasonable measure for the characteristic timescale.
+Pause: We have mentioned timescales a bunch of times here, but what do we really mean. Well, it all feels a bit vague and hand-wavey, but what we really mean are the characteristic time over which there is a substantial change in some aspect of a system (an oscillator, a phase, an amplitude). If you have a periodic function of the form $f\left(t\right)=\sin\left(t\right)$, and let’s say that $t $is measured in seconds, then if you look at your system at time $t=0$ and time $t=0.01$, then your system isn’t going to have changed much. By timescale here we really mean, over what minimum order of magnitude of time will we see a noticeable change. There are lots of vague notions in here. What do we mean by “noticeable change ”? Also, what do we mean by order of magnitude. We really mean here not that we care about whether it’s 1 second, or 1.1 seconds, but whether it’s 1 second, or 0.1 seconds, or 10 seconds, etc. And in this case, because the frequency is $\frac{1}{2\pi{}}$, we can say that the timescale over which things change substantially is on the order of 1 second. After 1 second, you’ve completed 1/2π of the whole oscillation. After $\frac{4}{2\pi{}} \text{ seconds you }'\text{ ve gone } \text{ from } 0$ to the maximum of the oscillation, so this is a reasonable measure for the characteristic timescale.
 
 For the exponential part, we are really again asking over which time period are you seeing a substantial change, and here after time of order 1/ε, the term $e^{\epsilon{} t}$ has changed by a factor of $e$. Of course we could say that it had already changed a reasonable amount after $\frac{1}{2\epsilon{}}$but we are just interested in the order of magnitude, and so we just care about the relative difference in timescales. One is of order 1 and one is of order $\frac{1}{\epsilon{}}.$
 
@@ -238,7 +238,7 @@ $$
 Which has solutions
 
 $$
-x_{0}\left(\tau{},T\right)=A\left(T\right)\text{ cos }\left(\tau{}\right)+B\left(T\right) \text{ sin }\left(\tau{}\right)
+x_{0}\left(\tau{},T\right)=A\left(T\right)\cos\left(\tau{}\right)+B\left(T\right) \sin\left(\tau{}\right)
 $$
 
 Where the functions $A \text{ and } B $are not fixed. This sounds kind of ridiculous! But actually if we now go to the next order in ε, we have the equation:
@@ -250,17 +250,17 @@ $$
 and now we can plug our solution above in to get:
 
 $$
-\frac{{\partial{}}^{2}}{\partial{} {\tau{}}^{2}}x_{1}\left(\tau{},T\right)+2\frac{\partial{}}{\partial{} T}\frac{\partial{}}{\partial{} \tau{}}\left(A\left(T\right)\text{ cos }\left(\tau{}\right)+B\left(T\right) \text{ sin }\left(\tau{}\right)\right)+ x_{1}\left(\tau{},T\right)+2\frac{\partial{}}{\partial{} \tau{}}\left(A\left(T\right)\text{ cos }\left(\tau{}\right)+B\left(T\right) \text{ sin }\left(\tau{}\right)\right)=0
+\frac{{\partial{}}^{2}}{\partial{} {\tau{}}^{2}}x_{1}\left(\tau{},T\right)+2\frac{\partial{}}{\partial{} T}\frac{\partial{}}{\partial{} \tau{}}\left(A\left(T\right)\cos\left(\tau{}\right)+B\left(T\right) \sin\left(\tau{}\right)\right)+ x_{1}\left(\tau{},T\right)+2\frac{\partial{}}{\partial{} \tau{}}\left(A\left(T\right)\cos\left(\tau{}\right)+B\left(T\right) \sin\left(\tau{}\right)\right)=0
 $$
 
 $$
-\frac{{\partial{}}^{2}}{\partial{} {\tau{}}^{2}}x_{1}\left(\tau{},T\right)+2\left(-A'\left(T\right)\text{ sin }\left(\tau{}\right)+B'\left(T\right) \text{ cos }\left(\tau{}\right)\right)+ x_{1}\left(\tau{},T\right)+2\left(-A\left(T\right)\text{ sin }\left(\tau{}\right)+B\left(T\right) \text{ cos }\left(\tau{}\right)\right)=0
+\frac{{\partial{}}^{2}}{\partial{} {\tau{}}^{2}}x_{1}\left(\tau{},T\right)+2\left(-A'\left(T\right)\sin\left(\tau{}\right)+B'\left(T\right) \cos\left(\tau{}\right)\right)+ x_{1}\left(\tau{},T\right)+2\left(-A\left(T\right)\sin\left(\tau{}\right)+B\left(T\right) \cos\left(\tau{}\right)\right)=0
 $$
 
 which we can rewrite as:
 
 $$
-\frac{{\partial{}}^{2}}{\partial{} {\tau{}}^{2}}x_{1}\left(\tau{},T\right)+ x_{1}\left(\tau{},T\right)=-2\text{ sin }\left(\tau{}\right)\left(A\left(T\right)+A'\left(T\right)\right)+2\text{ cos }\left(\tau{}\right)\left(B\left(T\right)+B'\left(T\right)\right)
+\frac{{\partial{}}^{2}}{\partial{} {\tau{}}^{2}}x_{1}\left(\tau{},T\right)+ x_{1}\left(\tau{},T\right)=-2\sin\left(\tau{}\right)\left(A\left(T\right)+A'\left(T\right)\right)+2\cos\left(\tau{}\right)\left(B\left(T\right)+B'\left(T\right)\right)
 $$
 
 How could we ensure that we don’t have a resonant driving force here? Well, we can do this by setting:
@@ -286,10 +286,10 @@ $$
 so our $x_{0}\left(\tau{},T\right) $solution is:
 
 $$
-x_{0}\left(\tau{},T\right)=A_{0}e^{-T}\text{ cos }\left(\tau{}\right)+B_{0}e^{-T} \text{ sin }\left(\tau{}\right)
+x_{0}\left(\tau{},T\right)=A_{0}e^{-T}\cos\left(\tau{}\right)+B_{0}e^{-T} \sin\left(\tau{}\right)
 $$
 
-Why did we say that there can't be a resonant driving force? This is a bit subtle. If there was a driving force with timescale τ, we would end up with something where the τ would be not just the short-term time-scale but also the long-term timescale, which we know can’t be the case. The long-term dynamics is driven by T, not τ, so we can ’t have a driving force which makes the system explode on short time-scales.
+Why did we say that there can't be a resonant driving force? This is a bit subtle. If there was a driving force with timescale τ, we would end up with something where the τ would be not just the short-term time-scale but also the long-term timescale, which we know can’t be the case. The long-term dynamics is driven by T, not τ, so we can’t have a driving force which makes the system explode on short time-scales.
 
 We have to be a little careful to find our constant to match the initial conditions. Our initial conditions are:
 
@@ -326,37 +326,37 @@ The reason we had to be careful here was because now there are two time-variable
 Applying these two conditions gives:
 
 $$
-x_{0}\left(0,0\right)=A_{0}e^{-0}\text{ cos }\left(0\right)+B_{0}e^{-0} \text{ sin }\left(0\right)=A_{0}=0
+x_{0}\left(0,0\right)=A_{0}e^{-0}\cos\left(0\right)+B_{0}e^{-0} \sin\left(0\right)=A_{0}=0
 $$
 
 $$
-\left(\frac{\partial{}}{\partial{} \tau{}}\right)\left(x_{0}\left(\tau{},T\right)\right)|_{\tau{}=0,T=0}=-A_{0}e^{-T}\text{ sin }\left(\tau{}\right)+B_{0}e^{-T} \text{ cos }\left(\tau{}\right)|_{\tau{}=0,T=0}=B_{0}e^{-0} \text{ cos }\left(0\right)=B_{0}=1
+\left(\frac{\partial{}}{\partial{} \tau{}}\right)\left(x_{0}\left(\tau{},T\right)\right)|_{\tau{}=0,T=0}=-A_{0}e^{-T}\sin\left(\tau{}\right)+B_{0}e^{-T} \cos\left(\tau{}\right)|_{\tau{}=0,T=0}=B_{0}e^{-0} \cos\left(0\right)=B_{0}=1
 $$
 
 So $A_{0}=0$, $B_{0}=1$ and we have
 
 $$
-x_{0}\left(\tau{},T\right)=e^{-T} \text{ sin }\left(\tau{}\right)=e^{-t \epsilon{} }\text{ sin }\left(t\right)
+x_{0}\left(\tau{},T\right)=e^{-T} \sin\left(\tau{}\right)=e^{-t \epsilon{} }\sin\left(t\right)
 $$
 
-This is a very good approximation to the true solution, but doesn ’t take into account a THIRD timescale which is related to the $\sqrt{1-{\epsilon{}}^{2}} \text{ term }$...but that can be left for another day...
+This is a very good approximation to the true solution, but doesn’t take into account a THIRD timescale which is related to the $\sqrt{1-{\epsilon{}}^{2}} \text{ term }$...but that can be left for another day...
 
 Actually, let’s just think about the corrections. We know that the true answer is:
 
 $$
-x\left(t\right)=e^{-\epsilon{} t }\frac{\text{ sin }\left(\sqrt{1-{\epsilon{}}^{2}}t\right)}{\sqrt{1-{\epsilon{}}^{2}}}
+x\left(t\right)=e^{-\epsilon{} t }\frac{\sin\left(\sqrt{1-{\epsilon{}}^{2}}t\right)}{\sqrt{1-{\epsilon{}}^{2}}}
 $$
 
 Let’s expand the non-exponential term in ε to see where we are going wrong:
 
 $$
-x\left(t\right)=e^{-\epsilon{} t }\left(\text{ sin }\left(t\right)+\frac{1}{2} \left(-t \text{ cos }\left(t\right)+\text{ sin }\left(t\right)\right) {\epsilon{}}^{2}\right)
+x\left(t\right)=e^{-\epsilon{} t }\left(\sin\left(t\right)+\frac{1}{2} \left(-t \cos\left(t\right)+\sin\left(t\right)\right) {\epsilon{}}^{2}\right)
 $$
 
 So we see that the error is:
 
 $$
-\text{ error }\left(t\right)=\frac{e^{-\epsilon{} t }}{2}\left(\text{ sin }\left(t\right)-t \text{ cos }\left(t\right)\right){\epsilon{}}^{2}
+\text{ error }\left(t\right)=\frac{e^{-\epsilon{} t }}{2}\left(\sin\left(t\right)-t \cos\left(t\right)\right){\epsilon{}}^{2}
 $$
 
 Which is of order $1/{\epsilon{}}^{2}$.
@@ -406,7 +406,7 @@ $$
 we can write the solution to the first equation as the sin+cos combination, or we can write it as
 
 $$
-x_{0}\left(\tau{},T\right)=r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right)
+x_{0}\left(\tau{},T\right)=r\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right)
 $$
 
 (show that they are equivalent)
@@ -414,13 +414,13 @@ $$
 plugging this into the second equation we have:
 
 $$
-\\{\partial{}}_{\tau{}\tau{}}x_{1}\left(\tau{},T\right)+x_{1}\left(\tau{},T\right)=-2 {\partial{}}_{\tau{} T}r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right)-h\left(r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right),{\partial{}}_{\tau{}}r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right)\right)
+\\{\partial{}}_{\tau{}\tau{}}x_{1}\left(\tau{},T\right)+x_{1}\left(\tau{},T\right)=-2 {\partial{}}_{\tau{} T}r\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right)-h\left(r\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right),{\partial{}}_{\tau{}}r\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right)\right)
 $$
 
 which is:
 
 $$
-\\{\partial{}}_{\tau{}\tau{}}x_{1}\left(\tau{},T\right)+x_{1}\left(\tau{},T\right)=2 \left(r'\left(T\right)\text{ sin }\left(\tau{}+\phi{}\left(T\right)\right)+r\left(T\right)\phi{}'\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right)\right)-h\left(r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right),-r\left(T\right)\text{ sin }\left(\tau{}+\phi{}\left(T\right)\right)\right)
+\\{\partial{}}_{\tau{}\tau{}}x_{1}\left(\tau{},T\right)+x_{1}\left(\tau{},T\right)=2 \left(r'\left(T\right)\sin\left(\tau{}+\phi{}\left(T\right)\right)+r\left(T\right)\phi{}'\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right)\right)-h\left(r\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right),-r\left(T\right)\sin\left(\tau{}+\phi{}\left(T\right)\right)\right)
 $$
 
 We don’t want any driving terms on the right hand side, so there can’t be any terms proportional to sin(τ+φ(T)) or cos(τ+φ(T)).
@@ -428,19 +428,19 @@ We don’t want any driving terms on the right hand side, so there can’t be an
 For the first two terms that seems pretty easy...but for the h term...how do we pull out the terms proportional to sin and cos? Let’s just simplify notation a little bit here first. We’ll remember all the functional dependencies and write the right hand side as:
 
 $$
-\\2 \left(r'\text{ sin }\left(\tau{}+\phi{}\right)+r \phi{}'\text{ cos }\left(\tau{}+\phi{}\right)\right)-h\left(r \text{ cos }\left(\tau{}+\phi{} \right),-r \text{ sin }\left(\tau{}+\phi{} \right)\right)
+\\2 \left(r'\sin\left(\tau{}+\phi{}\right)+r \phi{}'\cos\left(\tau{}+\phi{}\right)\right)-h\left(r \cos\left(\tau{}+\phi{} \right),-r \sin\left(\tau{}+\phi{} \right)\right)
 $$
 
 and in fact we can also let τ+φ = θ to give
 
 $$
-\\2 r'\text{ sin }\left(\theta{}\right)+2r \phi{}'\text{ cos }\left(\theta{}\right)-h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)
+\\2 r'\sin\left(\theta{}\right)+2r \phi{}'\cos\left(\theta{}\right)-h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)
 $$
 
 So $h \text{ is } a \text{ periodic } $function of θ...now we get our Fourier hats on, because we know that a function which is periodic in θ can be written as:
 
 $$
-\\h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)=\underset{k=0}{\overset{\infty{}}{\sum{}}}a_{k}\text{ cos }\left(k \theta{}\right)+\underset{k=1}{\overset{\infty{}}{\sum{}}}b_{k}\text{ sin }\left(k \theta{}\right)
+\\h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)=\underset{k=0}{\overset{\infty{}}{\sum{}}}a_{k}\cos\left(k \theta{}\right)+\underset{k=1}{\overset{\infty{}}{\sum{}}}b_{k}\sin\left(k \theta{}\right)
 $$
 
 where the $b_{0} \text{ term }$ doesn’t appear as sin(0)=0. Here the $a_{k} \text{ and } b_{k} \text{ will be } \text{ functions of } r\left(T\right)$, but we can worry about that later.
@@ -448,15 +448,15 @@ where the $b_{0} \text{ term }$ doesn’t appear as sin(0)=0. Here the $a_{k} \t
 To calculate the Fourier coefficients, you need to integrate h:
 
 $$
-\\a_{0}=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)\mathrm{d}\theta{}
+\\a_{0}=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)\mathrm{d}\theta{}
 $$
 
 $$
-a_{k}=\frac{1}{\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)\text{ cos } \left(k \theta{}\right)\mathrm{d}\theta{}, k\geq 1
+a_{k}=\frac{1}{\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)\cos \left(k \theta{}\right)\mathrm{d}\theta{}, k\geq 1
 $$
 
 $$
-b_{k}=\frac{1}{\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)\text{ sin } \left(k \theta{}\right)\mathrm{d}\theta{}, k\geq 1
+b_{k}=\frac{1}{\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)\sin \left(k \theta{}\right)\mathrm{d}\theta{}, k\geq 1
 $$
 
 This looks horrendous, but in fact when we look at a concrete example it will all become clear.
@@ -464,13 +464,13 @@ This looks horrendous, but in fact when we look at a concrete example it will al
 Now looking at the right hand side again we have:
 
 $$
-\\2 r'\text{ sin }\left(\theta{}\right)+2r \phi{}'\text{ cos }\left(\theta{}\right)-\underset{k=0}{\overset{\infty{}}{\sum{}}}a_{k}\text{ cos }\left(k \theta{}\right)-\underset{k=1}{\overset{\infty{}}{\sum{}}}b_{k}\text{ sin }\left(k \theta{}\right)
+\\2 r'\sin\left(\theta{}\right)+2r \phi{}'\cos\left(\theta{}\right)-\underset{k=0}{\overset{\infty{}}{\sum{}}}a_{k}\cos\left(k \theta{}\right)-\underset{k=1}{\overset{\infty{}}{\sum{}}}b_{k}\sin\left(k \theta{}\right)
 $$
 
-The only contribution proportional to $\sin\left(\theta\right), \cos\left(\theta\right)$ (see below regarding why we don’t care about the higher order $\text{ sin }\left(k \theta{}\right) \text{ and cos }\left(k \theta{}\right)$) is:
+The only contribution proportional to $\sin\left(\theta\right), \cos\left(\theta\right)$ (see below regarding why we don’t care about the higher order $\sin\left(k \theta{}\right) \text{ and cos }\left(k \theta{}\right)$) is:
 
 $$
-\\2 r'\text{ sin }\left(\theta{}\right)+2r \phi{}'\text{ cos }\left(\theta{}\right)-a_{1}\text{ cos }\left(\theta{}\right)-b_{1}\text{ sin }\left(\theta{}\right)=\text{ sin }\left(\theta{}\right)\left(2r'-b_{1}\right)+\text{ cos }\left(\theta{}\right)\left(2r \phi{}'-a_{1}\right)
+\\2 r'\sin\left(\theta{}\right)+2r \phi{}'\cos\left(\theta{}\right)-a_{1}\cos\left(\theta{}\right)-b_{1}\sin\left(\theta{}\right)=\sin\left(\theta{}\right)\left(2r'-b_{1}\right)+\cos\left(\theta{}\right)\left(2r \phi{}'-a_{1}\right)
 $$
 
 which must vanish, so we must have
@@ -486,17 +486,17 @@ $$
 Which says that:
 
 $$
-\\r'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)\text{ sin } \left(\theta{}\right)\mathrm{d}\theta{}
+\\r'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)\sin \left(\theta{}\right)\mathrm{d}\theta{}
 $$
 
 $$
-r \phi{}'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)\text{ cos } \left(\theta{}\right)\mathrm{d}\theta{}
+r \phi{}'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)\cos \left(\theta{}\right)\mathrm{d}\theta{}
 $$
 
 which is enough information to give us our unknown functions which can then be plugged back into
 
 $$
-x_{0}\left(\tau{},T\right)=r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right)
+x_{0}\left(\tau{},T\right)=r\left(T\right)\cos\left(\tau{}+\phi{}\left(T\right)\right)
 $$
 
 Let’s try this for the Van der Pol oscillator:
@@ -508,23 +508,23 @@ $$
 this means that $h\left(x,\dot{x} \right)=\left(x^{2}-1\right)\dot{x} $and therefore
 
 $$
-h\left(r \text{ cos }\left(\theta{}\right),-r \text{ sin }\left(\theta{}\right)\right)=\left(r^{2}{\text{ cos }}^{2}\theta{}-1\right)\left(-r \text{ sin } \theta{}\right)
+h\left(r \cos\left(\theta{}\right),-r \sin\left(\theta{}\right)\right)=\left(r^{2}{\cos}^{2}\theta{}-1\right)\left(-r \sin \theta{}\right)
 $$
 
 So plugging this into the above:
 
 $$
-\\r'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}\left(r^{2}{\text{ cos }}^{2}\theta{}-1\right)\left(-r \text{ sin } \theta{}\right)\text{ sin } \left(\theta{}\right)\mathrm{d}\theta{}
+\\r'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}\left(r^{2}{\cos}^{2}\theta{}-1\right)\left(-r \sin \theta{}\right)\sin \left(\theta{}\right)\mathrm{d}\theta{}
 $$
 
 $$
-r \phi{}'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}\left(r^{2}{\text{ cos }}^{2}\theta{}-1\right)\left(-r \text{ sin } \theta{}\right)\text{ cos } \left(\theta{}\right)\mathrm{d}\theta{}
+r \phi{}'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}\left(r^{2}{\cos}^{2}\theta{}-1\right)\left(-r \sin \theta{}\right)\cos \left(\theta{}\right)\mathrm{d}\theta{}
 $$
 
 Taking the first of these we can write the integral as:
 
 $$
-\\\frac{r}{2\pi{}}{\int{}}_{0}^{2\pi{}}{\text{ sin }}^{2}\theta{}\mathrm{d}\theta{}-\frac{r^{3}}{2\pi{}}{\int{}}_{0}^{2\pi{}}{\text{ cos }}^{2}\theta{} {\text{ sin }}^{2}\theta{}\mathrm{d}\theta{}
+\\\frac{r}{2\pi{}}{\int{}}_{0}^{2\pi{}}{\sin}^{2}\theta{}\mathrm{d}\theta{}-\frac{r^{3}}{2\pi{}}{\int{}}_{0}^{2\pi{}}{\cos}^{2}\theta{} {\sin}^{2}\theta{}\mathrm{d}\theta{}
 $$
 
 These integrals of the form:
@@ -554,25 +554,25 @@ $$
 and for the second equation we have:
 
 $$
-r \phi{}'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}\left(r^{2}{\text{ cos }}^{2}\theta{}-1\right)\left(-r \text{ sin } \theta{}\right)\text{ cos } \left(\theta{}\right)\mathrm{d}\theta{}=0, \text{ which implies } \text{ that } \phi{}=\text{ constant }.
+r \phi{}'=\frac{1}{2\pi{}}{\int{}}_{0}^{2\pi{}}\left(r^{2}{\cos}^{2}\theta{}-1\right)\left(-r \sin \theta{}\right)\cos \left(\theta{}\right)\mathrm{d}\theta{}=0, \text{ which implies } \text{ that } \phi{}=\text{ constant }.
 $$
 
 with initial condition $x\left(0\right)=1, x'\left(0\right)=0$, we have, for the first of these:
 
 $$
-x_{0}\left(0,0\right)=r\left(0\right)\text{ cos }\left(0+\phi{}\left(0\right)\right)=1
+x_{0}\left(0,0\right)=r\left(0\right)\cos\left(0+\phi{}\left(0\right)\right)=1
 $$
 
 and for the second
 
 $$
-\left(\frac{\partial{}}{\partial{} \tau{}}\right)\left(r\left(T\right)\text{ cos }\left(\tau{}+\phi{}\left(T\right)\right)\right)|_{\tau{}=0,T=0}=r\left(0\right)\text{ sin }\left(0+\phi{}\left(0\right)\right)=0
+\left(\frac{\partial}{\partial \tau}\right)\left(r(T)\cos(\tau+\phi(T))\right)\Big|_{\tau=0,T=0}=-r(0)\sin(\phi(0))=0
 $$
 
 so squaring each of these equations and adding them gives us:
 
 $$
-{r\left(0\right)}^{2}{\text{ cos }}^{2}\left(\phi{}\left(0\right)\right)+{r\left(0\right)}^{2}{\text{ sin }}^{2}\left(\phi{}\left(0\right)\right)=1
+{r\left(0\right)}^{2}{\cos}^{2}\left(\phi{}\left(0\right)\right)+{r\left(0\right)}^{2}{\sin}^{2}\left(\phi{}\left(0\right)\right)=1
 $$
 
 meaning that
@@ -590,7 +590,7 @@ $$
 and finally
 
 $$
-\text{ cos }\left(\phi{}\left(0\right)\right)=1
+\cos\left(\phi{}\left(0\right)\right)=1
 $$
 
 $$
@@ -600,27 +600,27 @@ $$
 which because we know that φ is constant, means that it’s identically zero. Now, the overall solution is:
 
 $$
-x_{0}\left(\tau{},T\right)=\frac{2 }{\sqrt{1+3e^{-T}}}\text{ cos }\left(\tau{}\right)
+x_{0}\left(\tau{},T\right)=\frac{2 }{\sqrt{1+3e^{-T}}}\cos\left(\tau{}\right)
 $$
 
 and so:
 
 $$
-x\left(\tau{},T\right)=\frac{2 }{\sqrt{1+3e^{-T}}}\text{ cos }\left(\tau{}\right)+O\left(\epsilon{}\right)
+x\left(\tau{},T\right)=\frac{2 }{\sqrt{1+3e^{-T}}}\cos\left(\tau{}\right)+O\left(\epsilon{}\right)
 $$
 
 converting back into t and ε we have:
 
 $$
-x\left(t\right)=\frac{2 }{\sqrt{1+3e^{-t \epsilon{}}}}\text{ cos }\left(t\right)+O\left(\epsilon{}\right)
+x\left(t\right)=\frac{2 }{\sqrt{1+3e^{-t \epsilon{}}}}\cos\left(t\right)+O\left(\epsilon{}\right)
 $$
 
-One thing that you might be a bit confused about is why we don ’t care about having contributions of $\sin$ and $\cos\left(k\theta\right)$ for $k>1$ on the right hand side.
+One thing that you might be a bit confused about is why we don’t care about having contributions of $\sin$ and $\cos\left(k\theta\right)$ for $k>1$ on the right hand side.
 
 The point is that if we have a system of the form
 
 $$
-\ddot{x} +x=\text{ cos }\left(t\right)
+\ddot{x} +x=\cos\left(t\right)
 $$
 
 then the period of the system
@@ -634,7 +634,7 @@ is the same as the period of the system $\cos\left(t\right)$. So the two will sy
 On the other hand if you force it with twice the frequency, then half the time you will be pushing in the direction that it’s going, and half the time you will be pushing it against its motion. Looking at plots of
 
 $$
-\ddot{x} +x=\text{ cos }\left(t\right) \text{ and }   \ddot{x} +x=\text{ cos }\left(2t\right)
+\ddot{x} +x=\cos\left(t\right) \text{ and }   \ddot{x} +x=\cos\left(2t\right)
 $$
 
 we see:

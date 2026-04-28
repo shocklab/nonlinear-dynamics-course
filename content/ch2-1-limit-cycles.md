@@ -53,7 +53,7 @@ As an aside, take a look at the vector fields above (both cases) in polar coordi
 
 **Exercise:**For the above vector fields, try and plot $x\left(t\right) $for a number of different starting conditions.
 
-So how come we never saw these types of behaviour when we looked at linear systems last year? Remember we did have stable and unstable spirals, but nothing where we had solutions which spiralled towards a circle. There ’s a very clear reason for this not being possible in a linear system.
+So how come we never saw these types of behaviour when we looked at linear systems last year? Remember we did have stable and unstable spirals, but nothing where we had solutions which spiralled towards a circle. There’s a very clear reason for this not being possible in a linear system.
 
 $$
 \left(\begin{matrix} \dot{x} \\ \dot{y} \end{matrix}\right)=A\left(\begin{matrix} x \\ y \end{matrix}\right)
@@ -75,7 +75,7 @@ will also be a solution. This is just a scaling of the original trajectory, and 
 
 This then shows that in a linear system you couldn’t have a circle, and a spiral trajectory.
 
-The Van Der Pol Oscillator
+The Van der Pol Oscillator
 
 We’ve looked previously at driven and damped systems. They tend to be systems of the form
 
@@ -94,11 +94,11 @@ $$
 For instance, when we have initial conditions $x\left(0\right)=1, x'\left(0\right)=-1/2$, the solutions for $\mu{}=\pm{}1$ are:
 
 $$
-x_{\mu{}=1}= {\mathrm{e}}^{-t/2} \text{ cos }\left(\frac{\sqrt{3} t}{2}\right)
+x_{\mu{}=1}= {\mathrm{e}}^{-t/2} \cos\left(\frac{\sqrt{3} t}{2}\right)
 $$
 
 $$
-x_{\mu{}=-1}=  {\mathrm{e}}^{t/2} \left(\text{ cos }\left(\frac{\sqrt{3} t}{2}\right)-\frac{2}{\sqrt{3}} \text{ sin }\left(\frac{\sqrt{3} t}{2}\right)\right)
+x_{\mu{}=-1}=  {\mathrm{e}}^{t/2} \left(\cos\left(\frac{\sqrt{3} t}{2}\right)-\frac{2}{\sqrt{3}} \sin\left(\frac{\sqrt{3} t}{2}\right)\right)
 $$
 
 Make sure that you can see why one is driven and one is damped.
@@ -131,4 +131,4 @@ Below is plotted the phase plane with some trajectories for this system:
 
 While there is no circular solution here, there is a stable limit cycle which both trajectories starting inside it and those starting outside it are attracted to.
 
-There’s a full lecture by Steven Strogatz here on the Van der Pol oscillator which is very good, though you don ’t need to know all of the details for this course.
+There’s a full lecture by Steven Strogatz here on the Van der Pol oscillator which is very good, though you don’t need to know all of the details for this course.

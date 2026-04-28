@@ -31,7 +31,7 @@ In the following animation, I let μ vary from -0.4 to 0.2. You will see circles
 
 What’s happening here?
 
-Well, because of the rotational symmetry of the problem, the limit cycles will be circles of fixed radius about the origin, so to find them we just have to find when $4\to $
+Well, because of the rotational symmetry of the problem, the limit cycles will be circles of fixed radius about the origin, so to find them we just have to find when
 
 $$
 \dot{r}=0    \to    \mu{} r+r^{3}-r^{5}=0
@@ -53,7 +53,7 @@ but in fact these are only real for certain values of μ. Plotting these along w
 
 ![Figure 2](/images/part32/output_002.png)
 
-Where as usual dashed lines correspond to instability, though we have to be careful here about the limit cycles (blue), for $r>0,\text{ and the } \text{ fixed point } \left(\text{ red }\right) \text{ at } r=0$.
+Where, as usual, dashed lines correspond to instability. However, we must be careful here about the limit cycles (blue) for $r>0$, and the fixed point (red) at $r=0$.
 
 Note that we have what is a bifurcation happening at $\mu{}=-\frac{1}{4}$, where suddenly the radius of the limit cycle becomes real and a stable and unstable limit cycle appear. Note that this point is NOT the Hopf bifurcation. That happens at μ=0. We also have a rather interesting thing happening as the unstable limit cycle collapses in to the origin and changes the nature of the fixed point from stable to unstable. We’ve never seen that before.
 
@@ -79,24 +79,24 @@ The important point here is that the small amplitude oscillation goes from being
 
 To understand a bit more about what’s happening in terms of the fixed point, we will look at the Eigenvalues of the Jacobian at the fixed point at the origin.
 
-To do this we will convert everything back to Cartesian coordinates. Writing $x=r \text{ cos } \theta{} \text{ and } y=r \text{ sin } \theta{} \text{ we have }:$
+To do this we will convert everything back to Cartesian coordinates. Writing $x=r \cos \theta{} \text{ and } y=r \sin \theta{} \text{ we have }:$
 
 $$
-\dot{x}=\dot{r} \text{ cos } \theta{}-r \text{ sin } \theta{} \dot{\theta{}}
+\dot{x}=\dot{r} \cos \theta{}-r \sin \theta{} \dot{\theta{}}
 $$
 
 $$
-\dot{y}=\dot{r} \text{ sin } \theta{}+r \text{ cos } \theta{} \dot{\theta{}}
+\dot{y}=\dot{r} \sin \theta{}+r \cos \theta{} \dot{\theta{}}
 $$
 
 Plugging in the equations of motion for this system we get:
 
 $$
-\dot{x}=\left(\mu{} r+r^{3}-r^{5}\right) \text{ cos } \theta{}-r \text{ sin } \theta{} \left(\omega{}+b r^{2}\right)=\left(\mu{} +r^{2}-r^{4}\right)r \text{ cos } \theta{}-r \text{ sin } \theta{} \left(\omega{}+b r^{2}\right)
+\dot{x}=\left(\mu{} r+r^{3}-r^{5}\right) \cos \theta{}-r \sin \theta{} \left(\omega{}+b r^{2}\right)=\left(\mu{} +r^{2}-r^{4}\right)r \cos \theta{}-r \sin \theta{} \left(\omega{}+b r^{2}\right)
 $$
 
 $$
-\dot{y}=\left(\mu{} r+r^{3}-r^{5}\right) \text{ sin } \theta{}+r \text{ cos } \theta{} \left(\omega{}+b r^{2}\right)=\left(\mu{} +r^{2}-r^{4}\right) r \text{ sin } \theta{}+r \text{ cos } \theta{} \left(\omega{}+b r^{2}\right)
+\dot{y}=\left(\mu{} r+r^{3}-r^{5}\right) \sin \theta{}+r \cos \theta{} \left(\omega{}+b r^{2}\right)=\left(\mu{} +r^{2}-r^{4}\right) r \sin \theta{}+r \cos \theta{} \left(\omega{}+b r^{2}\right)
 $$
 
 and converting the right hand side back to Cartesian coordinates we have:
@@ -125,7 +125,7 @@ $$
 A=\left(\begin{matrix} \mu{} & -\omega{} \\ \omega{} & \mu{} \end{matrix}\right)
 $$
 
-Rather than studying this in terms of the determinant and trace, let ’s actually find the eigenvalues. Well, you should be able to show that these are:
+Rather than studying this in terms of the determinant and trace, let’s actually find the eigenvalues. Well, you should be able to show that these are:
 
 $$
 \lambda{}=\mu{}\pm{}i \omega{}
@@ -167,11 +167,11 @@ There is no value for which there is an unstable limit cycle, and so here, when 
 
 ![Figure 7](/images/part32/output_007.png)
 
-Here everything happens smoothly, and is reversible. That is that as you increase and decrease μ, you can smoothly go from the limit cycle to the fixed point limit. In the subcritical case there is a sudden change which can ’t be reversed. This is hysteresis, and essentially corresponds to following the following trajectory:
+Here everything happens smoothly, and is reversible. That is that as you increase and decrease μ, you can smoothly go from the limit cycle to the fixed point limit. In the subcritical case there is a sudden change which can’t be reversed. This is hysteresis, and essentially corresponds to following the following trajectory:
 
 ![Figure 8](/images/part32/anim_003.gif)
 
-|The subcritical Hopf bifurcation is a dangerous thing to find, and can occur in engineering situations where vibrations suddenly occur, and are very hard to get rid of without a large change in the parameters of your system. They also occur in neurons.
+The subcritical Hopf bifurcation is a dangerous thing to find, and can occur in engineering situations where vibrations suddenly occur, and are very hard to get rid of without a large change in the parameters of your system. They also occur in neurons.
 
 In fact there is a third type of Hopf Bifurcation which can occur called a **Degenerate Hopf Bifurcation**, though in this case there is no limit cycle at all.
 
@@ -182,7 +182,7 @@ $$
 $$
 
 $$
-\dot{y}=-\mu{} y-\text{ sin } x
+\dot{y}=-\mu{} y-\sin x
 $$
 
 We have the following:

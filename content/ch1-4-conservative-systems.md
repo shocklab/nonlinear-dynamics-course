@@ -17,15 +17,15 @@ If you are doing an experiment in a laboratory where there are windows, you may 
 
 However, if you closed all the doors and put blinds on the windows then maybe your system would be time translationally invariant. If you have very very sensitive equipment however, then the gravitational pull of the sun and the earth may make a difference which would again **break this symmetry**.
 
-Anyway, we will not worry about the details of this too much now, but that ’s just a quick taster as to the importance of symmetries. For now, we are going to be interested in particular types of **conservative systems**.
+Anyway, we will not worry about the details of this too much now, but that’s just a quick taster as to the importance of symmetries. For now, we are going to be interested in particular types of **conservative systems**.
 
-Let’s start off with a second order system given by Newton ’s law
+Let’s start off with a second order system given by Newton’s law
 
 $$
 m \ddot{x}=F\left(x\right)
 $$
 
-You can also write this as $F=m a. $Here $m \text{ is the } \text{ mass }$ of some object and it says that the acceleration of the object is equal to the force applied to it divided by the mass. Small masses accelerate faster under a given force than do large masses.
+You can also write this as $F=m a. $Here $m$ is the mass of some object and it says that the acceleration of the object is equal to the force applied to it divided by the mass. Small masses accelerate faster under a given force than do large masses.
 
 Note that we have written here that the force can be a function of the position, but not of time (corresponding to a driving force), or of the velocity of the object (corresponding to a damping force)
 
@@ -37,7 +37,7 @@ $$
 
 This says that the force comes from a difference in the potential energy between two points. The reason you accelerate under gravity is because the potential energy at different vertical heights is different, and so there is a gradient in the potential energy which means that there is a force on you which means that you accelerate.
 
-It turns out that for all systems for which $F \text{ is } $a function only of $x$ you can write the force in terms of this gradient.
+It turns out that for all systems for which $F$ is a function only of $x$ you can write the force in terms of this gradient.
 
 We can now write Newton’s law as
 
@@ -83,7 +83,7 @@ $$
 
 along trajectories in phase space and that $Q$ is a **real-valued function** and **is nonconstant on every open set**.
 
-Addition to the previous version of the notes: Why do we require that it has to be nonconstant on every open set? Well, this is because for ANY dynamical system, a fixed number is constant on every open set. Let’s say that I choose the function Q=5 for all x. Well, we could, naively say “hooray, we ’ve found a conserved quantity, therefore there can ’t be any nodes or spirals”. But this is a trivial case and doesn’t put any constraint on the path. Sure, numbers are always constant, but that doesn’t give any constraint on the dynamics, which non-trivial Q does.
+Addition to the previous version of the notes: Why do we require that it has to be nonconstant on every open set? Well, this is because for ANY dynamical system, a fixed number is constant on every open set. Let’s say that I choose the function Q=5 for all x. Well, we could, naively say “hooray, we’ve found a conserved quantity, therefore there can’t be any nodes or spirals”. But this is a trivial case and doesn’t put any constraint on the path. Sure, numbers are always constant, but that doesn’t give any constraint on the dynamics, which non-trivial Q does.
 
 If we had an attracting fixed point in a system, then all trajectories in the basin of attraction would lead to that fixed point, and so if we had a conservative system, all of those trajectories would have the same conserved quantity (let’s call it energy for now), and so everywhere in the open set around the fixed point would have the same constant energy and so the above conditions would not hold. Of course, even in this case, there is a trivial conserved quantity, which is just any constant function, but that doesn’t tell us anything interesting.
 
@@ -107,7 +107,7 @@ looks like:
 
 Remember that the force is equal to the negative of the gradient, so where there is a steep gradient, the force is larger and at the bottom of the two wells there is zero gradient so no force and the particle just sits there.
 
-Writing Newton’s law for this system and fixing $m=1$) gives:
+Writing Newton’s law for this system and fixing $m=1$ gives:
 
 $$
 \ddot{x}+\frac{d \left(-\frac{1}{2}x^{2}+\frac{1}{4}x^{4}\right)}{d x}=0
@@ -153,9 +153,9 @@ So we have two centers and one saddle point.
 
 What do we remember from the section about linearisation? That centers are very very sensitive to non-linearities, and what might look like a center when we linearise might become either an attracting or repelling fixed point when we include non-linearities. So perhaps those centers are just a linearised dream and if you looked at the whole system they would disappear.
 
-However, we also know that our system is conservative and so there can ’t be any stable or unstable spirals or stars or degenerate nodes (attracting or repelling fixed points), so somehow the center may still remain.
+However, we also know that our system is conservative and so there can’t be any stable or unstable spirals or stars or degenerate nodes (attracting or repelling fixed points), so somehow the center may still remain.
 
-In fact we can find the trajectories by finding the paths for which $E$ is a constant. $E \text{ in this } \text{ case }$ is just (remembering that $m=1\right)$:
+In fact we can find the trajectories by finding the paths for which $E$ is a constant. $E$ in this case is just (remembering that $m=1$):
 
 $$
 E=\frac{1}{2}{\dot{x}}^{2}+V
@@ -197,7 +197,7 @@ $$
 \dot{y}=0
 $$
 
-So $x \text{ is increasing } \text{ at this } \text{ point and } \text{ so } $the trajectory must be going clockwise:
+So $x$ is increasing at this point and so the trajectory must be going clockwise:
 
 ![Figure 5](/images/part14-2/output_005.png)
 
@@ -255,9 +255,9 @@ $$
 
 This is a plot of the **energy function** of this system. Keep in mind as always that y is really the velocity. So we take the system at any position and any velocity and it will tell us the energy of the system for all time to come after that as it traces one of the contours on the energy surface.
 
-One important thing to note here is that the dynamics of this system shouldn ’t be confused with the dynamics of the particle rolling about in the double well. Dynamics here all happens along horizontal cross-sections corresponding to energy contours.
+One important thing to note here is that the dynamics of this system shouldn’t be confused with the dynamics of the particle rolling about in the double well. Dynamics here all happens along horizontal cross-sections corresponding to energy contours.
 
-A projection of these contours into the $\left(x,y\right) \text{ plane simply } \text{ gives the } \text{ trajectories in } \text{ the phase } \text{ space }.$
+A projection of these contours into the $(x,y)$ plane simply gives the trajectories in the phase space.
 
 ![Figure 16](/images/part14-2/output_016.png)
 
@@ -302,10 +302,10 @@ This would correspond to a spiral. as θ increases, so $r$ increases.
 We could plot something more complicated, like
 
 $$
-r\left(\theta{}\right)=\text{ sin }\left({\theta{}}^{2}\right)+\frac{1}{1+{\theta{}}^{2}}
+r\left(\theta{}\right)=\sin\left({\theta{}}^{2}\right)+\frac{1}{1+{\theta{}}^{2}}
 $$
 
-I’ve no idea what this looks like...let ’s see...
+I’ve no idea what this looks like...let’s see...
 
 ![Figure 18](/images/part14-2/output_018.png)
 
@@ -319,7 +319,7 @@ $$
 
 where α comes out of classical gravity and is a positive parameter, and ε $u^{2}$ is the so called relativistic correction. We can think of ε as a very small parameter which tells us that the real world is well approximated by classical gravity, but that we need to take relativity into account if we want really precise answers.
 
-You should look at this equation, and see how it compares with Newton ’s law (hint hint):
+You should look at this equation, and see how it compares with Newton’s law (hint hint):
 
 $$
 \frac{d^{2}x}{d t^{2}}=\frac{-d V}{d x}

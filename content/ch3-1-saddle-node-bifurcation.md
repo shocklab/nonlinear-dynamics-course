@@ -71,7 +71,7 @@ separately. Plotting these as dashed lines on the trajectories in the phase spac
 
 The intersections of the null-clines are the fixed points.
 
-OK, so let’s look at a slightly different example now. Let ’s take the vector field given by:
+OK, so let’s look at a slightly different example now. Let’s take the vector field given by:
 
 $$
 \dot{x}=-a x+y
@@ -123,13 +123,13 @@ Fixing $b=1 $we have the following, with $a$ varying, and the vector field plott
 
 What do we see? We see two fixed points coming together as the parameter changes, and annihilating.
 
-But why are we doing this in terms of null-clines all of a sudden? Well, let ’s think about what we have here...it’s two lines intersecting at two points. Those two points come together, and then the intersection disappears. This is actually exactly like the one-dimensional case, where we would plot the graph of
+But why are we doing this in terms of null-clines all of a sudden? Well, let’s think about what we have here...it’s two lines intersecting at two points. Those two points come together, and then the intersection disappears. This is actually exactly like the one-dimensional case, where we would plot the graph of
 
 $$
 \dot{x}=f\left(x\right)
 $$
 
-and the fixed points would be the intersection with the x-axis. It ’s the same thing - the intersection of two curves...it ’s just that in the one-dimensional case, one of the curves is just the x-axis. Let’s look at a simple example in one dimension:
+and the fixed points would be the intersection with the x-axis. It’s the same thing - the intersection of two curves...it’s just that in the one-dimensional case, one of the curves is just the x-axis. Let’s look at a simple example in one dimension:
 
 ![Figure 5](/images/part31/anim_streamplot.gif)
 
@@ -195,7 +195,7 @@ We see, as we have seen before, that in the case where there are three fixed poi
 
 To the bottom left of the blue line everything flows to the fixed point at 0. To the top right of the blue line everything flows to the non-zero fixed point.
 
-OK, so we’ve spent a lot of time now looking at saddle-node bifurcations. How about the other types that we see in one-dimension. Well, I ’m going to leave it as an exercise for you to explore the following bifurcations:
+OK, so we’ve spent a lot of time now looking at saddle-node bifurcations. How about the other types that we see in one-dimension. Well, I’m going to leave it as an exercise for you to explore the following bifurcations:
 
 $$
 \dot{x}=\mu{} x-x^{2}, \dot{y}=-y
@@ -214,5 +214,5 @@ While these examples are decoupled, and so in some sense even more similar to th
 Also explore the example
 
 $$
-\dot{x}=\mu{} x+y+\text{ sin } x, \dot{y}=x-y
+\dot{x}=\mu{} x+y+\sin x, \dot{y}=x-y
 $$

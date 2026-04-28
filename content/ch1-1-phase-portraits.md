@@ -5,7 +5,7 @@ math: true
 ---
 ## Section 1.1: Phase portraits in two dimensions
 
-Before we start, I will use phase portrait, phase diagram and phase plane somewhat interchangably.
+Before we start, I will use phase portrait, phase diagram and phase plane somewhat interchangeably.
 
 As discussed in section 0, the last thing that we studied in MAM1043H was two-dimensional linear systems. We found that there were a number of different possible behaviours (essentially different kinds of fixed points), depending on the trace and determinant of the matrix $A$. This is all well and good, but most systems are not linear. However, will use some of the same techniques that we used for non-linear one-dimensional systems to see what happens when we can make some linear approximation of a non-linear system. Don't worry about it at the moment, this will all become clear soon!
 
@@ -45,7 +45,7 @@ $$
 
 Note that it’s only non-linear because of the ${x_{1}}^{3} $term.
 
-I’m just plotting the full phase portrait here. You aren ’t expected to be able to do this, but we will use it for illustrative purposes.
+I’m just plotting the full phase portrait here. You aren’t expected to be able to do this, but we will use it for illustrative purposes.
 
 ![Figure 1](/images/part11/output_001.png)
 
@@ -123,7 +123,7 @@ So when we refer to a set of equations as a vector field, this is why.
 
 Numerical solutions
 
-In addition to being able to get the general features, there are a number of ways of calculating flows in the phase space numerically (this means without finding the analytic - ie. exact - solutions). Here I’m going to give you the equations for a particular method of doing this and I ’m not going to tell you a lot more. Try and do this in Python, or, if you know it, Matlab. It doesn’t matter if you don’t get it. I mostly want you to experiment with it.
+In addition to being able to get the general features, there are a number of ways of calculating flows in the phase space numerically (this means without finding the analytic - ie. exact - solutions). Here I’m going to give you the equations for a particular method of doing this and I’m not going to tell you a lot more. Try and do this in Python, or, if you know it, Matlab. It doesn’t matter if you don’t get it. I mostly want you to experiment with it.
 
 Let’s first think about how we might take a continuous differential equation and discretise it. Starting with:
 
@@ -193,7 +193,7 @@ $$
 \dot{y}=-y
 $$
 
-(where here we have used $x \text{ and } y \text{ instead of } x_{1} \text{ and } x_{2}$).
+(where we have used $x$ and $y$ instead of $x_{1}$ and $x_{2}$).
 
 0. Draw the $x$ and $y$ axes for (-2,2) in the $x$ direction and (-1,1) in the $y$ direction.
 

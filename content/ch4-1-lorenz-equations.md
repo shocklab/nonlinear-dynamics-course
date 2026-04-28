@@ -5,7 +5,7 @@ math: true
 ---
 ## Section 4.1: The Lorenz equations
 
-The moment is here...chaos has arrived...finally. Actually, in Greek mythology, chaos was all there was before the creation of the Cosmos, when order came to mess with the natural way of all things...but we ’re getting lost already.
+The moment is here...chaos has arrived...finally. Actually, in Greek mythology, chaos was all there was before the creation of the Cosmos, when order came to mess with the natural way of all things...but we’re getting lost already.
 
 Here we are going to introduce a set of equations which encompass many of the phenomena that we have been speaking about in this course...and more...
 
@@ -23,7 +23,7 @@ $$
 \dot{z}=x y-b z
 $$
 
-where $\sigma{}, r \text{ and } b$ are positive real parameters. These equations look pretty innocuous...they are almost linear, and the non-linearities are just quadratic in the three variables $x, y \text{ and } z$. Ay, there’s the rub...we have three variables, and that is key. We hand-waved our way into believing (correctly), that for non-pathological two-dimensional continuous time systems we can ’t have chaos. But now we have three dimensions, and the cat is well and truly out of the bag and can dart and weave and pirouette in ways that it simply couldn’t in flatland.
+where $\sigma{}, r \text{ and } b$ are positive real parameters. These equations look pretty innocuous...they are almost linear, and the non-linearities are just quadratic in the three variables $x, y \text{ and } z$. Ay, there’s the rub...we have three variables, and that is key. We hand-waved our way into believing (correctly), that for non-pathological two-dimensional continuous time systems we can’t have chaos. But now we have three dimensions, and the cat is well and truly out of the bag and can dart and weave and pirouette in ways that it simply couldn’t in flatland.
 
 These equations came about from a simplified model of how air moves in the atmosphere, but it turns out that this system of equations can be used to describe quite a range of different processes. That’s part of the beauty of mathematical modeling. Often you will find that two systems, when looked at under a slightly blurry microscope, look remarkably similar, and results from one can be ported to the other. In Strogatz he discusses how this system of equations can be used to describe a chaotic waterwheel, and while the example is interesting, I don’t think that it leads to sufficient additional insight that we will use it here. Take a look in his book though for the full exposition.
 
@@ -130,7 +130,7 @@ $$
 which we can solve to get:
 
 $$
-\overset{  }{V}=V_{0}e^{-\left(\sigma{}+1+b\right)t}
+\dot{V}=V_{0}e^{-\left(\sigma{}+1+b\right)t}
 $$
 
 If you take any volume in phase space, then over time it will shrink exponentially quickly.
@@ -241,7 +241,7 @@ $$
 = 2\sigma{}\left(- {\left(x-\frac{y}{2}\left(1+r\right)\right)}^{2}-y^{2}\left(1-{\left(\frac{1+r}{2}\right)}^{2}\right)-x^{2}-z^{2}b\right)
 $$
 
-which, so long as $r-1<0$ is necessarily negative. So all trajectories must decrease in their value of $V$...but V is itself like a three dimensional parabola, and so we just roll down it all the way to $\left(0,0,0\right)$ where out V is at a minimum. This proves that the origin is indeed globally stable in this parameter range.
+which, so long as $r-1<0$ is necessarily negative. So all trajectories must decrease in their value of $V$...but V is itself like a three dimensional parabola, and so we just roll down it all the way to $\left(0,0,0\right)$ where our V is at a minimum. This proves that the origin is indeed globally stable in this parameter range.
 
 Let’s now look at the system for $r>1$. The origin is now a saddle in the $\left(x,y\right)$ plane and attractive in the $z$ direction. But how about the other fixed points?
 
@@ -407,13 +407,13 @@ Note here that we are discussing limit cycles in three dimensions all of a sudde
 
 What is a bit different is that we have a new type of limit cycle in three dimensions called a saddle cycle where there may be a stable limit cycle in a plane, as well as an unstable direction, or vice versa.
 
-In this case we have an unstable limit cycle, and a stable direction. It ’s like a cross between a saddle and an unstable limit cycle and is actually a little unintuitive, but is important for understanding what ’s happening in the system as we go towards the chaotic regime, though we are not there yet.
+In this case we have an unstable limit cycle, and a stable direction. It’s like a cross between a saddle and an unstable limit cycle and is actually a little unintuitive, but is important for understanding what’s happening in the system as we go towards the chaotic regime, though we are not there yet.
 
 In Strogatz an analogue of the following picture is presented
 
 ![Figure 11](/images/part41/output_011.png)
 
-Where there is a plane with an unstable limit cycle (in red) and then a perpendicular stable direction. This is a partial picture, but it doesn ’t quite give an intuition about what happens off the plane. The limit cycle only exists in the plane itself (and in the Lorenz case the plane isn’t even flat), and so we have this sort of tube above and below of regions which will be attracted to the fixed point...but what happens to flows which start outside of the limit cycle and above the plane? Well, these may be attracted to the other fixed point $C^{-}$ if this one is $C^{+}$).
+Where there is a plane with an unstable limit cycle (in red) and then a perpendicular stable direction. This is a partial picture, but it doesn’t quite give an intuition about what happens off the plane. The limit cycle only exists in the plane itself (and in the Lorenz case the plane isn’t even flat), and so we have this sort of tube above and below of regions which will be attracted to the fixed point...but what happens to flows which start outside of the limit cycle and above the plane? Well, these may be attracted to the other fixed point $C^{-}$ if this one is $C^{+}$).
 
 Here we plot the $x, y \text{ and } z $values as a function of time for different starting points in the plane. We see that solutions are attracted to the two fixed points at $C^{\pm{}}.$
 
@@ -449,7 +449,7 @@ What we see here doesn’t look all that different from what we had for a lower 
 
 What we have here is a so-called strange attractor. It has zero volume, and is like a warped, wrapped surface around the unstable fixed points. All trajectories get attracted to this region, even if they start off way away from it...and yes, now we have chaos. You cannot make predictions about where a trajectory will end up unless you have perfect precision...and you never have perfect precision in reality. Chaos actually requires more than that which we will explore in the next set of notes.
 
-**A Strange Attractor**, as it is called, is really the far future behaviour (although to simulate it we don’t need to go so far into the future to see what ’s going on. It is called a strange attractor because it attracts all nearby trajectories (in fact in this case all trajectories) over time, and the strangeness is in its fractal properties, which we will take a look at.
+**A Strange Attractor**, as it is called, is really the far future behaviour (although to simulate it we don’t need to go so far into the future to see what’s going on. It is called a strange attractor because it attracts all nearby trajectories (in fact in this case all trajectories) over time, and the strangeness is in its fractal properties, which we will take a look at.
 
 Note that the strangeness is often attributed to the chaos, but you can have a nonchaotic strange attractor. The strangeness is really about the structure of the attractor, not about its sensitivity to initial conditions.
 

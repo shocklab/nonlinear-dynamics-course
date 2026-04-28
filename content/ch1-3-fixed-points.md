@@ -5,13 +5,13 @@ math: true
 ---
 ## Section 1.3: Fixed Points and Linearisation
 
-Again we had a look at this topic back in MAM1043H. If you don ’t remember this in detail (or at all), take a look here. Note also that I’ve added a very small section at the end in blue here which I had not discussed last year and will be important for the assignment.
+Again we had a look at this topic back in MAM1043H. If you don’t remember this in detail (or at all), take a look here. Note also that I’ve added a very small section at the end in blue here which I had not discussed last year and will be important for the assignment.
 
 It’s going to turn out that most of the time, the ideas about being able to linearise about fixed points to study stability will hold in two dimensions. Some of the time however the linearised system is in the class of “**borderline**” cases of Centers, Stars, Degenerate Nodes and Non-isolated Fixed Points. In these cases we have to be a little more careful as funny things can happen as we will see below.
 
 ![Figure 1](/images/part13/output_001.png)
 
-But we’re getting ahead of ourselves here. Let ’s just see how we can extend the ideas of linearising a one-dimensional system to linearising a two-dimensional one.
+But we’re getting ahead of ourselves here. Let’s just see how we can extend the ideas of linearising a one-dimensional system to linearising a two-dimensional one.
 
 We start, as always these days, with our system looking like:
 
@@ -115,7 +115,7 @@ $$
 
 The first thing that we see is that this system is **decoupled**. This means that the dynamics in the $x \text{ direction is } \text{ not dependent } \text{ on the } y \text{ position }, \text{ and vice } \text{ versa }. $We could actually find the solutions for $x$ and $y$ separately, but let’s go through the analysis above.
 
-First we want to find the fixed points. These are given by solving $\dot{x}$=$\dot{y}=0.$ and we get three fixed points, at coordinate $\left(-1,0\right),\left(0,0\right) \text{ and } \left(1,0\right)$. We we are trying to do with the linearisation analysis is to get an idea of the nature of these fixed points.
+First we want to find the fixed points. These are given by solving $\dot{x}$=$\dot{y}=0.$ and we get three fixed points, at coordinate $\left(-1,0\right),\left(0,0\right) \text{ and } \left(1,0\right)$. What we are trying to do with the linearisation analysis is to get an idea of the nature of these fixed points.
 
 Next we want to find the Jacobian matrix which is the matrix of partial derivatives. Then we will find the Jacobian matrix at the fixed points. This gives us
 
@@ -159,7 +159,7 @@ $$
 x=-1+u_{0}e^{2t}, y=v_{0}e^{-2t}
 $$
 
-Plotting some characteristic flows near the fixed point (ie. for small $u \text{ and } v\right)$ we have:
+Plotting some characteristic flows near the fixed point (ie. for small $u$ and $v$) we have:
 
 ![Figure 4](/images/part13/output_004.png)
 
@@ -175,7 +175,7 @@ $$
 0=-x+x^{3}
 $$
 
-but leaving $y$ unfixed. In fact we see here that for $x=-1,0 \text{ and } 1$, the flows are purely vertical. We can then solve for the y equation for these values. Actually, in this case because the system is uncoupled, the value of $x$ has makes no difference and we just have:
+but leaving $y$ unfixed. In fact we see here that for $x=-1,0 \text{ and } 1$, the flows are purely vertical. We can then solve for the y equation for these values. Actually, in this case because the system is uncoupled, the value of $x$ makes no difference and we just have:
 
 $$
 \dot{y}=-2y \longrightarrow{} y=y_{0}e^{-2t}
@@ -193,7 +193,7 @@ This already gives us a pretty good idea about the flows. Now imagine that you s
 
 ![Figure 8](/images/part13/output_008.png)
 
-What might the flow of this look like? Well, it looks like it ’s going to mostly move down, but then as it gets closer to the x-axis it’s going to be moving to the left, attracted by the stable fixed point. Indeed solving the system exactly and this flow we see that our intuition is correct:
+What might the flow of this look like? Well, it looks like it’s going to mostly move down, but then as it gets closer to the x-axis it’s going to be moving to the left, attracted by the stable fixed point. Indeed solving the system exactly and this flow we see that our intuition is correct:
 
 ![Figure 9](/images/part13/output_009.png)
 
@@ -242,11 +242,11 @@ Which sits here (the red spot) in the space of possible linear systems:
 The linearised system can be solved exactly and gives:
 
 $$
-x=x_{0}\text{ cos } t-y_{0} \text{ sin } t
+x=x_{0}\cos t-y_{0} \sin t
 $$
 
 $$
-y=x_{0}\text{ sin } t+y_{0} \text{ cos } t
+y=x_{0}\sin t+y_{0} \cos t
 $$
 
 which are indeed spirals. For $a=0, \text{ these }$ solutions are exact, and we might imagine that for small $a \text{ they would }$ also be good approximations of the true solutions for small values of $\left(x,y\right)$ and therefore that all solutions would look something like:
@@ -255,34 +255,34 @@ which are indeed spirals. For $a=0, \text{ these }$ solutions are exact, and we 
 
 In this small region. However, we can show that this isn’t the case by making a change of coordinates and solving the system exactly.
 
-Let’s go from Cartesian to Polar coordinates by letting $x=r \text{ cos } \theta{}, y=r \text{ sin } \theta{}$ which means that:
+Let’s go from Cartesian to Polar coordinates by letting $x=r \cos \theta{}, y=r \sin \theta{}$ which means that:
 
 $$
-\dot{x}=\frac{d \left(r \text{ cos } \theta{}\right)}{\text{ dt }}=\dot{r} \text{ cos } \theta{}-r \dot{\theta{}} \text{ sin } \theta{}
+\dot{x}=\frac{d \left(r \cos \theta{}\right)}{\text{ dt }}=\dot{r} \cos \theta{}-r \dot{\theta{}} \sin \theta{}
 $$
 
 $$
-\dot{y}=\frac{d \left(r \text{ sin } \theta{}\right)}{\text{ dt }}=\dot{r} \text{ sin } \theta{}+r \dot{\theta{}} \text{ cos } \theta{}
+\dot{y}=\frac{d \left(r \sin \theta{}\right)}{\text{ dt }}=\dot{r} \sin \theta{}+r \dot{\theta{}} \cos \theta{}
 $$
 
 So we have:
 
 $$
-\dot{r} \text{ cos } \theta{}-r \dot{\theta{}} \text{ sin } \theta{} = -r \text{ sin } \theta{}+a r^{3} \text{ cos } \theta{}
+\dot{r} \cos \theta{}-r \dot{\theta{}} \sin \theta{} = -r \sin \theta{}+a r^{3} \cos \theta{}
 $$
 
 $$
-\dot{r} \text{ sin } \theta{}+r \dot{\theta{}} \text{ cos } \theta{} = r \text{ cos } \theta{}+a r^{3} \text{ sin } \theta{}
+\dot{r} \sin \theta{}+r \dot{\theta{}} \cos \theta{} = r \cos \theta{}+a r^{3} \sin \theta{}
 $$
 
 Multiplying the top equation by cos θ and the bottom by sin θ gives us:
 
 $$
-\dot{r} {\text{ cos }}^{2} \theta{}-r \dot{\theta{}} \text{ sin } \theta{} \text{ cos } \theta{}= -r \text{ sin } \theta{} \text{ cos } \theta{}+a r^{3} {\text{ cos }}^{2} \theta{}
+\dot{r} {\cos}^{2} \theta{}-r \dot{\theta{}} \sin \theta{} \cos \theta{}= -r \sin \theta{} \cos \theta{}+a r^{3} {\cos}^{2} \theta{}
 $$
 
 $$
-\dot{r} {\text{ sin }}^{2} \theta{}+r \dot{\theta{}} \text{ sin } \theta{} \text{ cos } \theta{}= r \text{ sin } \theta{} \text{ cos } \theta{}+a r^{3} {\text{ sin }}^{2} \theta{}
+\dot{r} {\sin}^{2} \theta{}+r \dot{\theta{}} \sin \theta{} \cos \theta{}= r \sin \theta{} \cos \theta{}+a r^{3} {\sin}^{2} \theta{}
 $$
 
 Adding the equations together gives:
@@ -297,7 +297,7 @@ $$
 \dot{\theta{}} =1
 $$
 
-So, it would have been easier to start with this, wouldn’t it? Well, the reason that we didn’t was to show (as you ’ll see in a moment) that linearising doesn’t always work.
+So, it would have been easier to start with this, wouldn’t it? Well, the reason that we didn’t was to show (as you’ll see in a moment) that linearising doesn’t always work.
 
 So, we can solve this exactly and we get:
 
@@ -309,7 +309,7 @@ For $a=0, \text{ indeed we } DO \text{ get } $a circle, as we would expect, beca
 
 ![Figure 13](/images/part13/output_013.png)
 
-So why is this system so sensitive to any change in $a? Well$, for $a=0 \text{ we have } \text{ perfect center } $solutions. A tiny tiny perturbation from a center solution is going to mean that after one orbit, if the path doesn’t close then we no longer have a center solution and we end up with either an inspiral or outspiral. The solutions would have to change in a very specific way to be perturbed away from centers, and yet to still come back to their starting places after one orbit. This isn’t impossible to imagine, but it’s clearly got to be a very special perturbation to do this.
+So why is this system so sensitive to any change in $a$? Well, for $a=0$ we have perfect center solutions. A tiny tiny perturbation from a center solution is going to mean that after one orbit, if the path doesn’t close then we no longer have a center solution and we end up with either an inspiral or outspiral. The solutions would have to change in a very specific way to be perturbed away from centers, and yet to still come back to their starting places after one orbit. This isn’t impossible to imagine, but it’s clearly got to be a very special perturbation to do this.
 
 One thing to note here is that for $a=0$, the fixed point is stable, whereas for $a>0$ it becomes unstable, so the non-linearity can not only change behaviour near the fixed point, it can even change the nature of the fixed point.
 
@@ -341,7 +341,7 @@ If however you have both eigenvalues purely imaginary, then a tiny deformation f
 
 The Hartman-Grobman theorem:
 
-The statement about hyperbolic solutions being robust is a general statement that can be made for systems in any number of dimensions. It can be shown that of you have a system of n-nonlinear differential equations, and if the linearised system, about some fixed point is hyperbolic (all eigenvalues have a real part), then the local trajectories close to a hyperbolic fixed point is **topologically equivalent**to the linearisation about the fixed point.
+The statement about hyperbolic solutions being robust is a general statement that can be made for systems in any number of dimensions. It can be shown that if you have a system of n-nonlinear differential equations, and if the linearised system, about some fixed point is hyperbolic (all eigenvalues have a real part), then the local trajectories close to a hyperbolic fixed point is **topologically equivalent**to the linearisation about the fixed point.
 
 This topological equivalence means that you can make a continuous and invertible transformation of the paths in the phase space between the linearised and non-linear system in such a way that the arrow of time remains the same.
 
@@ -365,7 +365,7 @@ $$
 
 But the solution to this is $x=x_{0}$ which clearly doesn’t make sense, as that says that close to the fixed point, solutions are all fixed points. The point is that with linearisation, we can only throw away higher order terms if they are less important than lower order terms. And here there are no lower order terms.
 
-In everything that we’ve spoken about above, it would seem that we can always linearise, but we can’t always trust the linearisation when we are on one of the boundary solutions. However, this isn ’t always true. For instance, given:
+In everything that we’ve spoken about above, it would seem that we can always linearise, but we can’t always trust the linearisation when we are on one of the boundary solutions. However, this isn’t always true. For instance, given:
 
 $$
 \dot{x}=y-x
@@ -387,7 +387,7 @@ If we plot this vector field close to the fixed point we see:
 
 ![Figure 17](/images/part13/output_017.png)
 
-Where the fixed point at the center simply isn’t one of the linear fixed points, in any limit. It’s kind of saddle-pointesque...there are lines flowing in, and lines flowing out, but it ’s a pretty weird one.
+Where the fixed point at the center simply isn’t one of the linear fixed points, in any limit. It’s kind of saddle-pointesque...there are lines flowing in, and lines flowing out, but it’s a pretty weird one.
 
 We will talk more about these non-linearisable fixed points when we talk about index theorems.
 
